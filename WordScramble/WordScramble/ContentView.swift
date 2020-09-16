@@ -38,7 +38,7 @@ struct ContentView: View {
                 rootWord = allWords.randomElement() ?? "silkworm"
                 
                 // If we are here everything has worked, exit func
-                return
+        
             }
         }
         
