@@ -1,4 +1,4 @@
-# 100DayOfSwiftUI
+# 100DaysOfSwiftUI
 
 This is my repo full of projects from the course, 100 Days Of SwiftUI Challenge by Paul Hudson.
 
@@ -6,7 +6,7 @@ This is my repo full of projects from the course, 100 Days Of SwiftUI Challenge 
 
 Type               | Number  | Completion
 :---               |  :---:  |   :---:
-Projects           |  4 / 19 | 21%
+Projects           |  5 / 19 | 26%
 Milestone Projects |  1 / 6  | 16%
 Challenge days     |  1 / 1  | 100%
 
