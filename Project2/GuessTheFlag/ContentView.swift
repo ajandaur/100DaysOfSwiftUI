@@ -105,7 +105,7 @@ struct ContentView: View {
         showingScore = true
     }
     
-    // reset the game after each flag queation
+    // reset the game after each flag question
     func askQuestion() {
         isCorrect = true
         countries.shuffle()
