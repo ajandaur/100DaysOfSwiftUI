@@ -13,6 +13,8 @@
 		87DE671D255DBC0400FAB869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE671C255DBC0400FAB869 /* Preview Assets.xcassets */; };
 		87DE6728255DBC0500FAB869 /* EdutainmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6727255DBC0500FAB869 /* EdutainmentTests.swift */; };
 		87DE6733255DBC0500FAB869 /* EdutainmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6732255DBC0500FAB869 /* EdutainmentUITests.swift */; };
+		87FFEF6E256456DA00847FDD /* MainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFEF6D256456DA00847FDD /* MainGameView.swift */; };
+		87FFEF732564600400847FDD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFEF722564600400847FDD /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		87DE672E255DBC0500FAB869 /* EdutainmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdutainmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DE6732255DBC0500FAB869 /* EdutainmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentUITests.swift; sourceTree = "<group>"; };
 		87DE6734255DBC0500FAB869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FFEF6D256456DA00847FDD /* MainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameView.swift; sourceTree = "<group>"; };
+		87FFEF722564600400847FDD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				87DE6715255DBC0100FAB869 /* EdutainmentApp.swift */,
 				87DE6717255DBC0100FAB869 /* ContentView.swift */,
+				87FFEF722564600400847FDD /* Questions.swift */,
+				87FFEF6D256456DA00847FDD /* MainGameView.swift */,
 				87DE6719255DBC0400FAB869 /* Assets.xcassets */,
 				87DE671E255DBC0400FAB869 /* Info.plist */,
 				87DE671B255DBC0400FAB869 /* Preview Content */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DE6718255DBC0100FAB869 /* ContentView.swift in Sources */,
+				87FFEF732564600400847FDD /* Questions.swift in Sources */,
+				87FFEF6E256456DA00847FDD /* MainGameView.swift in Sources */,
 				87DE6716255DBC0100FAB869 /* EdutainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
