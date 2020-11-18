@@ -16,13 +16,34 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var questions = [Question]()
-    
-
-    private var numberOfQuestions = ["5","10","20","All"]
-    @State private var questionSelectedIndex = 0
+    // user selects number of times tables
     @State private var numberOfTables = 0
-    @State private var gameisRunning = false
+    
+    // store the question bank
+    @State private var questions = [Question]()
+    // question counter
+    @State private var questionCounter = 0
+    // choose the number of questions to ask
+    private var amountOfQuestions = ["5","10","20","All"]
+    // index that the user chos for amountOfQuestions
+    @State private var questionSelectedIndex = 0
+    // Turn string from amountOfQuestions to a number
+    @State private var numberOfQuestions = 0
+    
+    
+    // go between settings and game mode
+    @State private var gameisRunning = true
+    // display when game is over
+    @State private var gameOver = false
+    
+    
+    @State private var answer = ""
+    @State private var score = 0
+    @State var totalQuestions = 0
+    
+    
+    @State private var currentQuestion = Question(tableNumber: 1, multiplier: 1)
+    @State private var currentQuestionIndex = 0
     
     
     
@@ -43,9 +64,9 @@ struct ContentView: View {
                             .font(.headline)
                         
                         // Picker to decide the number of questions to ask
-                        Picker(selection: $questionSelectedIndex, label: Text("\(numberOfQuestions[questionSelectedIndex])")) {
-                            ForEach(0..<numberOfQuestions.count) {
-                                Text(self.numberOfQuestions[$0])
+                        Picker(selection: $questionSelectedIndex, label: Text("\(amountOfQuestions[questionSelectedIndex])")) {
+                            ForEach(0..<amountOfQuestions.count) {
+                                Text(self.amountOfQuestions[$0])
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
@@ -61,10 +82,77 @@ struct ContentView: View {
                     Text("Start Game")
                 })
                 
-                
             } // NavigationView
         } else {
-            MainGameView(gameIsRunning: $gameisRunning, numberOfQuestions: Int(numberOfQuestions[questionSelectedIndex]) ?? 10, questions: questions)
+            NavigationView{
+                VStack(alignment: .center, spacing: 0) {
+                    // Question
+                    Text(currentQuestion.question)
+                        .font(.headline)
+                        .padding()
+                    
+                    // User input
+                    TextField("Answer", text: $answer)
+                        .padding(5)
+                        .multilineTextAlignment(.center)
+                        .font(Font.system(size: 15, weight: .medium, design: .monospaced))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.green, lineWidth: 2))
+                        .keyboardType(.decimalPad)
+                        .padding()
+                    
+                    // button to check answer and load next question
+                    Button(action: {
+                        // check
+                        self.checkAnswer()
+                        // next question
+                        self.nextQuestion()
+                        // clear answer
+                        answer = ""
+                        
+                        
+                    }) {
+                        Text("Submit")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(40)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 40)
+                                    .stroke(Color.red, lineWidth: 5)
+                            )
+                    }
+                    Spacer()
+                    Text("Score \(score)")
+                    Text("Questions remaining: \(numberOfQuestions - questionCounter)")
+                    Spacer()
+                    
+                }
+                .padding()
+                .navigationBarTitle(Text("Multiplication Game"))
+                .padding(.leading)
+                .padding(.trailing)
+                .navigationBarItems(trailing: Button(action: {
+                    withAnimation {
+                        gameisRunning.toggle()
+                    }
+                }) {
+                    Text("Settings")
+                }
+                )
+                
+                // game over alert
+                .alert(isPresented: $gameOver) {
+                    Alert(title: Text("Game Over!"), message: Text("Your score: \(score)"), dismissButton: .default(Text("Continue")) {
+                        withAnimation {
+                            gameisRunning.toggle()
+                        }
+                        
+                    })
+                }
+            } //NavigationView
         }
     } // body
     
@@ -72,17 +160,54 @@ struct ContentView: View {
     func startGame() {
         // create question bank
         createQuestions()
+        // load questions
+        nextQuestion()
         // change the view to start game
-        gameisRunning = true
+        gameisRunning.toggle()
     }
     
     // generate all the questions depending on user input of numberOfTables
     func createQuestions() {
+        // reset counter
+        questionCounter = 0
+        // remove the questions from last game
+        questions.removeAll()
+        score = 0 // reset score
+        totalQuestions = 0 // reset total number of questions
         for i in 1 ... numberOfTables {
             for j in 1 ... numberOfTables {
-                let question = Question(text: "\(i) x \(j)", answer: "\(i * j)")
+                let question = Question(tableNumber: i, multiplier: j)
                 questions.append(question)
             }
+        }
+        //shuffle the questions
+        questions.shuffle()
+        
+        numberOfQuestions = Int(amountOfQuestions[questionSelectedIndex]) ?? questions.count
+    }
+    
+    func nextQuestion()
+    {
+        if questionCounter < numberOfQuestions
+        {
+            currentQuestion = questions[questionCounter % questions.count]
+            
+            questionCounter += 1
+            
+            
+        } else {
+            gameOver.toggle()
+        }
+    }
+    
+    func checkAnswer()
+    {
+        let correctAnswer = currentQuestion.answer
+        if (answer == correctAnswer)
+        {
+            score += 1
+        } else {
+            score -= 1
         }
     }
     

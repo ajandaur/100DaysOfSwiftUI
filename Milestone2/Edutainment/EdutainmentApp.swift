@@ -2,7 +2,7 @@
 //  EdutainmentApp.swift
 //  Edutainment
 //
-//  Created by Anmol  Jandaur on 11/12/20.
+//  Created by Anmol  Jandaur on 11/18/20.
 //
 
 import SwiftUI
@@ -13,11 +13,5 @@ struct EdutainmentApp: App {
         WindowGroup {
             ContentView()
         }
-    }
-}
-
-struct EdutainmentApp_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

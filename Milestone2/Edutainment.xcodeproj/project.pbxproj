@@ -7,66 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87DE6716255DBC0100FAB869 /* EdutainmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6715255DBC0100FAB869 /* EdutainmentApp.swift */; };
-		87DE6718255DBC0100FAB869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6717255DBC0100FAB869 /* ContentView.swift */; };
-		87DE671A255DBC0400FAB869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE6719255DBC0400FAB869 /* Assets.xcassets */; };
-		87DE671D255DBC0400FAB869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DE671C255DBC0400FAB869 /* Preview Assets.xcassets */; };
-		87DE6728255DBC0500FAB869 /* EdutainmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6727255DBC0500FAB869 /* EdutainmentTests.swift */; };
-		87DE6733255DBC0500FAB869 /* EdutainmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE6732255DBC0500FAB869 /* EdutainmentUITests.swift */; };
-		87FFEF6E256456DA00847FDD /* MainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFEF6D256456DA00847FDD /* MainGameView.swift */; };
-		87FFEF732564600400847FDD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FFEF722564600400847FDD /* Questions.swift */; };
+		8767F9062565C2970043FE16 /* EdutainmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9052565C2970043FE16 /* EdutainmentApp.swift */; };
+		8767F9082565C2970043FE16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9072565C2970043FE16 /* ContentView.swift */; };
+		8767F90A2565C29B0043FE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8767F9092565C29B0043FE16 /* Assets.xcassets */; };
+		8767F90D2565C29B0043FE16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8767F90C2565C29B0043FE16 /* Preview Assets.xcassets */; };
+		8767F9182565C29B0043FE16 /* EdutainmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9172565C29B0043FE16 /* EdutainmentTests.swift */; };
+		8767F9232565C29B0043FE16 /* EdutainmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9222565C29B0043FE16 /* EdutainmentUITests.swift */; };
+		8767F9342565C2EE0043FE16 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9332565C2EE0043FE16 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87DE6724255DBC0500FAB869 /* PBXContainerItemProxy */ = {
+		8767F9142565C29B0043FE16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87DE670A255DBC0100FAB869 /* Project object */;
+			containerPortal = 8767F8FA2565C2960043FE16 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87DE6711255DBC0100FAB869;
+			remoteGlobalIDString = 8767F9012565C2960043FE16;
 			remoteInfo = Edutainment;
 		};
-		87DE672F255DBC0500FAB869 /* PBXContainerItemProxy */ = {
+		8767F91F2565C29B0043FE16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87DE670A255DBC0100FAB869 /* Project object */;
+			containerPortal = 8767F8FA2565C2960043FE16 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87DE6711255DBC0100FAB869;
+			remoteGlobalIDString = 8767F9012565C2960043FE16;
 			remoteInfo = Edutainment;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87DE6712255DBC0100FAB869 /* Edutainment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edutainment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87DE6715255DBC0100FAB869 /* EdutainmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentApp.swift; sourceTree = "<group>"; };
-		87DE6717255DBC0100FAB869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87DE6719255DBC0400FAB869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87DE671C255DBC0400FAB869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		87DE671E255DBC0400FAB869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87DE6723255DBC0500FAB869 /* EdutainmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdutainmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87DE6727255DBC0500FAB869 /* EdutainmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentTests.swift; sourceTree = "<group>"; };
-		87DE6729255DBC0500FAB869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87DE672E255DBC0500FAB869 /* EdutainmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdutainmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87DE6732255DBC0500FAB869 /* EdutainmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentUITests.swift; sourceTree = "<group>"; };
-		87DE6734255DBC0500FAB869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87FFEF6D256456DA00847FDD /* MainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameView.swift; sourceTree = "<group>"; };
-		87FFEF722564600400847FDD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		8767F9022565C2960043FE16 /* Edutainment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edutainment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8767F9052565C2970043FE16 /* EdutainmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentApp.swift; sourceTree = "<group>"; };
+		8767F9072565C2970043FE16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8767F9092565C29B0043FE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8767F90C2565C29B0043FE16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8767F90E2565C29B0043FE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8767F9132565C29B0043FE16 /* EdutainmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdutainmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8767F9172565C29B0043FE16 /* EdutainmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentTests.swift; sourceTree = "<group>"; };
+		8767F9192565C29B0043FE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8767F91E2565C29B0043FE16 /* EdutainmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdutainmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8767F9222565C29B0043FE16 /* EdutainmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentUITests.swift; sourceTree = "<group>"; };
+		8767F9242565C29B0043FE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8767F9332565C2EE0043FE16 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87DE670F255DBC0100FAB869 /* Frameworks */ = {
+		8767F8FF2565C2960043FE16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE6720255DBC0500FAB869 /* Frameworks */ = {
+		8767F9102565C29B0043FE16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE672B255DBC0500FAB869 /* Frameworks */ = {
+		8767F91B2565C29B0043FE16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,62 +74,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87DE6709255DBC0100FAB869 = {
+		8767F8F92565C2960043FE16 = {
 			isa = PBXGroup;
 			children = (
-				87DE6714255DBC0100FAB869 /* Edutainment */,
-				87DE6726255DBC0500FAB869 /* EdutainmentTests */,
-				87DE6731255DBC0500FAB869 /* EdutainmentUITests */,
-				87DE6713255DBC0100FAB869 /* Products */,
+				8767F9042565C2960043FE16 /* Edutainment */,
+				8767F9162565C29B0043FE16 /* EdutainmentTests */,
+				8767F9212565C29B0043FE16 /* EdutainmentUITests */,
+				8767F9032565C2960043FE16 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		87DE6713255DBC0100FAB869 /* Products */ = {
+		8767F9032565C2960043FE16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87DE6712255DBC0100FAB869 /* Edutainment.app */,
-				87DE6723255DBC0500FAB869 /* EdutainmentTests.xctest */,
-				87DE672E255DBC0500FAB869 /* EdutainmentUITests.xctest */,
+				8767F9022565C2960043FE16 /* Edutainment.app */,
+				8767F9132565C29B0043FE16 /* EdutainmentTests.xctest */,
+				8767F91E2565C29B0043FE16 /* EdutainmentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87DE6714255DBC0100FAB869 /* Edutainment */ = {
+		8767F9042565C2960043FE16 /* Edutainment */ = {
 			isa = PBXGroup;
 			children = (
-				87DE6715255DBC0100FAB869 /* EdutainmentApp.swift */,
-				87DE6717255DBC0100FAB869 /* ContentView.swift */,
-				87FFEF722564600400847FDD /* Questions.swift */,
-				87FFEF6D256456DA00847FDD /* MainGameView.swift */,
-				87DE6719255DBC0400FAB869 /* Assets.xcassets */,
-				87DE671E255DBC0400FAB869 /* Info.plist */,
-				87DE671B255DBC0400FAB869 /* Preview Content */,
+				8767F9052565C2970043FE16 /* EdutainmentApp.swift */,
+				8767F9072565C2970043FE16 /* ContentView.swift */,
+				8767F9092565C29B0043FE16 /* Assets.xcassets */,
+				8767F9332565C2EE0043FE16 /* File.swift */,
+				8767F90E2565C29B0043FE16 /* Info.plist */,
+				8767F90B2565C29B0043FE16 /* Preview Content */,
 			);
 			path = Edutainment;
 			sourceTree = "<group>";
 		};
-		87DE671B255DBC0400FAB869 /* Preview Content */ = {
+		8767F90B2565C29B0043FE16 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				87DE671C255DBC0400FAB869 /* Preview Assets.xcassets */,
+				8767F90C2565C29B0043FE16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		87DE6726255DBC0500FAB869 /* EdutainmentTests */ = {
+		8767F9162565C29B0043FE16 /* EdutainmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				87DE6727255DBC0500FAB869 /* EdutainmentTests.swift */,
-				87DE6729255DBC0500FAB869 /* Info.plist */,
+				8767F9172565C29B0043FE16 /* EdutainmentTests.swift */,
+				8767F9192565C29B0043FE16 /* Info.plist */,
 			);
 			path = EdutainmentTests;
 			sourceTree = "<group>";
 		};
-		87DE6731255DBC0500FAB869 /* EdutainmentUITests */ = {
+		8767F9212565C29B0043FE16 /* EdutainmentUITests */ = {
 			isa = PBXGroup;
 			children = (
-				87DE6732255DBC0500FAB869 /* EdutainmentUITests.swift */,
-				87DE6734255DBC0500FAB869 /* Info.plist */,
+				8767F9222565C29B0043FE16 /* EdutainmentUITests.swift */,
+				8767F9242565C29B0043FE16 /* Info.plist */,
 			);
 			path = EdutainmentUITests;
 			sourceTree = "<group>";
@@ -139,13 +136,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87DE6711255DBC0100FAB869 /* Edutainment */ = {
+		8767F9012565C2960043FE16 /* Edutainment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DE6737255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "Edutainment" */;
+			buildConfigurationList = 8767F9272565C29B0043FE16 /* Build configuration list for PBXNativeTarget "Edutainment" */;
 			buildPhases = (
-				87DE670E255DBC0100FAB869 /* Sources */,
-				87DE670F255DBC0100FAB869 /* Frameworks */,
-				87DE6710255DBC0100FAB869 /* Resources */,
+				8767F8FE2565C2960043FE16 /* Sources */,
+				8767F8FF2565C2960043FE16 /* Frameworks */,
+				8767F9002565C2960043FE16 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -153,68 +150,68 @@
 			);
 			name = Edutainment;
 			productName = Edutainment;
-			productReference = 87DE6712255DBC0100FAB869 /* Edutainment.app */;
+			productReference = 8767F9022565C2960043FE16 /* Edutainment.app */;
 			productType = "com.apple.product-type.application";
 		};
-		87DE6722255DBC0500FAB869 /* EdutainmentTests */ = {
+		8767F9122565C29B0043FE16 /* EdutainmentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DE673A255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "EdutainmentTests" */;
+			buildConfigurationList = 8767F92A2565C29B0043FE16 /* Build configuration list for PBXNativeTarget "EdutainmentTests" */;
 			buildPhases = (
-				87DE671F255DBC0500FAB869 /* Sources */,
-				87DE6720255DBC0500FAB869 /* Frameworks */,
-				87DE6721255DBC0500FAB869 /* Resources */,
+				8767F90F2565C29B0043FE16 /* Sources */,
+				8767F9102565C29B0043FE16 /* Frameworks */,
+				8767F9112565C29B0043FE16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87DE6725255DBC0500FAB869 /* PBXTargetDependency */,
+				8767F9152565C29B0043FE16 /* PBXTargetDependency */,
 			);
 			name = EdutainmentTests;
 			productName = EdutainmentTests;
-			productReference = 87DE6723255DBC0500FAB869 /* EdutainmentTests.xctest */;
+			productReference = 8767F9132565C29B0043FE16 /* EdutainmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87DE672D255DBC0500FAB869 /* EdutainmentUITests */ = {
+		8767F91D2565C29B0043FE16 /* EdutainmentUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DE673D255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "EdutainmentUITests" */;
+			buildConfigurationList = 8767F92D2565C29B0043FE16 /* Build configuration list for PBXNativeTarget "EdutainmentUITests" */;
 			buildPhases = (
-				87DE672A255DBC0500FAB869 /* Sources */,
-				87DE672B255DBC0500FAB869 /* Frameworks */,
-				87DE672C255DBC0500FAB869 /* Resources */,
+				8767F91A2565C29B0043FE16 /* Sources */,
+				8767F91B2565C29B0043FE16 /* Frameworks */,
+				8767F91C2565C29B0043FE16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87DE6730255DBC0500FAB869 /* PBXTargetDependency */,
+				8767F9202565C29B0043FE16 /* PBXTargetDependency */,
 			);
 			name = EdutainmentUITests;
 			productName = EdutainmentUITests;
-			productReference = 87DE672E255DBC0500FAB869 /* EdutainmentUITests.xctest */;
+			productReference = 8767F91E2565C29B0043FE16 /* EdutainmentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		87DE670A255DBC0100FAB869 /* Project object */ = {
+		8767F8FA2565C2960043FE16 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					87DE6711255DBC0100FAB869 = {
-						CreatedOnToolsVersion = 12.1;
+					8767F9012565C2960043FE16 = {
+						CreatedOnToolsVersion = 12.2;
 					};
-					87DE6722255DBC0500FAB869 = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 87DE6711255DBC0100FAB869;
+					8767F9122565C29B0043FE16 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 8767F9012565C2960043FE16;
 					};
-					87DE672D255DBC0500FAB869 = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 87DE6711255DBC0100FAB869;
+					8767F91D2565C29B0043FE16 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 8767F9012565C2960043FE16;
 					};
 				};
 			};
-			buildConfigurationList = 87DE670D255DBC0100FAB869 /* Build configuration list for PBXProject "Edutainment" */;
+			buildConfigurationList = 8767F8FD2565C2960043FE16 /* Build configuration list for PBXProject "Edutainment" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,36 +219,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 87DE6709255DBC0100FAB869;
-			productRefGroup = 87DE6713255DBC0100FAB869 /* Products */;
+			mainGroup = 8767F8F92565C2960043FE16;
+			productRefGroup = 8767F9032565C2960043FE16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87DE6711255DBC0100FAB869 /* Edutainment */,
-				87DE6722255DBC0500FAB869 /* EdutainmentTests */,
-				87DE672D255DBC0500FAB869 /* EdutainmentUITests */,
+				8767F9012565C2960043FE16 /* Edutainment */,
+				8767F9122565C29B0043FE16 /* EdutainmentTests */,
+				8767F91D2565C29B0043FE16 /* EdutainmentUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		87DE6710255DBC0100FAB869 /* Resources */ = {
+		8767F9002565C2960043FE16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DE671D255DBC0400FAB869 /* Preview Assets.xcassets in Resources */,
-				87DE671A255DBC0400FAB869 /* Assets.xcassets in Resources */,
+				8767F90D2565C29B0043FE16 /* Preview Assets.xcassets in Resources */,
+				8767F90A2565C29B0043FE16 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE6721255DBC0500FAB869 /* Resources */ = {
+		8767F9112565C29B0043FE16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE672C255DBC0500FAB869 /* Resources */ = {
+		8767F91C2565C29B0043FE16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,50 +258,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		87DE670E255DBC0100FAB869 /* Sources */ = {
+		8767F8FE2565C2960043FE16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DE6718255DBC0100FAB869 /* ContentView.swift in Sources */,
-				87FFEF732564600400847FDD /* Questions.swift in Sources */,
-				87FFEF6E256456DA00847FDD /* MainGameView.swift in Sources */,
-				87DE6716255DBC0100FAB869 /* EdutainmentApp.swift in Sources */,
+				8767F9082565C2970043FE16 /* ContentView.swift in Sources */,
+				8767F9342565C2EE0043FE16 /* File.swift in Sources */,
+				8767F9062565C2970043FE16 /* EdutainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE671F255DBC0500FAB869 /* Sources */ = {
+		8767F90F2565C29B0043FE16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DE6728255DBC0500FAB869 /* EdutainmentTests.swift in Sources */,
+				8767F9182565C29B0043FE16 /* EdutainmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87DE672A255DBC0500FAB869 /* Sources */ = {
+		8767F91A2565C29B0043FE16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DE6733255DBC0500FAB869 /* EdutainmentUITests.swift in Sources */,
+				8767F9232565C29B0043FE16 /* EdutainmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87DE6725255DBC0500FAB869 /* PBXTargetDependency */ = {
+		8767F9152565C29B0043FE16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DE6711255DBC0100FAB869 /* Edutainment */;
-			targetProxy = 87DE6724255DBC0500FAB869 /* PBXContainerItemProxy */;
+			target = 8767F9012565C2960043FE16 /* Edutainment */;
+			targetProxy = 8767F9142565C29B0043FE16 /* PBXContainerItemProxy */;
 		};
-		87DE6730255DBC0500FAB869 /* PBXTargetDependency */ = {
+		8767F9202565C29B0043FE16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DE6711255DBC0100FAB869 /* Edutainment */;
-			targetProxy = 87DE672F255DBC0500FAB869 /* PBXContainerItemProxy */;
+			target = 8767F9012565C2960043FE16 /* Edutainment */;
+			targetProxy = 8767F91F2565C29B0043FE16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		87DE6735255DBC0500FAB869 /* Debug */ = {
+		8767F9252565C29B0043FE16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -355,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -365,7 +361,7 @@
 			};
 			name = Debug;
 		};
-		87DE6736255DBC0500FAB869 /* Release */ = {
+		8767F9262565C29B0043FE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -410,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,7 +416,7 @@
 			};
 			name = Release;
 		};
-		87DE6738255DBC0500FAB869 /* Debug */ = {
+		8767F9282565C29B0043FE16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -442,7 +438,7 @@
 			};
 			name = Debug;
 		};
-		87DE6739255DBC0500FAB869 /* Release */ = {
+		8767F9292565C29B0043FE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -464,7 +460,7 @@
 			};
 			name = Release;
 		};
-		87DE673B255DBC0500FAB869 /* Debug */ = {
+		8767F92B2565C29B0043FE16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -486,7 +482,7 @@
 			};
 			name = Debug;
 		};
-		87DE673C255DBC0500FAB869 /* Release */ = {
+		8767F92C2565C29B0043FE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -508,7 +504,7 @@
 			};
 			name = Release;
 		};
-		87DE673E255DBC0500FAB869 /* Debug */ = {
+		8767F92E2565C29B0043FE16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -528,7 +524,7 @@
 			};
 			name = Debug;
 		};
-		87DE673F255DBC0500FAB869 /* Release */ = {
+		8767F92F2565C29B0043FE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -551,43 +547,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87DE670D255DBC0100FAB869 /* Build configuration list for PBXProject "Edutainment" */ = {
+		8767F8FD2565C2960043FE16 /* Build configuration list for PBXProject "Edutainment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DE6735255DBC0500FAB869 /* Debug */,
-				87DE6736255DBC0500FAB869 /* Release */,
+				8767F9252565C29B0043FE16 /* Debug */,
+				8767F9262565C29B0043FE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DE6737255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "Edutainment" */ = {
+		8767F9272565C29B0043FE16 /* Build configuration list for PBXNativeTarget "Edutainment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DE6738255DBC0500FAB869 /* Debug */,
-				87DE6739255DBC0500FAB869 /* Release */,
+				8767F9282565C29B0043FE16 /* Debug */,
+				8767F9292565C29B0043FE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DE673A255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "EdutainmentTests" */ = {
+		8767F92A2565C29B0043FE16 /* Build configuration list for PBXNativeTarget "EdutainmentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DE673B255DBC0500FAB869 /* Debug */,
-				87DE673C255DBC0500FAB869 /* Release */,
+				8767F92B2565C29B0043FE16 /* Debug */,
+				8767F92C2565C29B0043FE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87DE673D255DBC0500FAB869 /* Build configuration list for PBXNativeTarget "EdutainmentUITests" */ = {
+		8767F92D2565C29B0043FE16 /* Build configuration list for PBXNativeTarget "EdutainmentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DE673E255DBC0500FAB869 /* Debug */,
-				87DE673F255DBC0500FAB869 /* Release */,
+				8767F92E2565C29B0043FE16 /* Debug */,
+				8767F92F2565C29B0043FE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 87DE670A255DBC0100FAB869 /* Project object */;
+	rootObject = 8767F8FA2565C2960043FE16 /* Project object */;
 }
