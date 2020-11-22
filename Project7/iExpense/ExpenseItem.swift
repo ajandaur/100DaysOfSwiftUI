@@ -17,10 +17,12 @@ struct ExpenseItem: Identifiable, Codable {
     // ask Swift to generate a UUID automatically for us..
     // don’t need to worry about the id value of our expense items
     // Swift will make sure they are always unique.
-    let id = UUID()
+    var id = UUID()
     
     let name: String
     let type: String
     let amount: Int
+    // Challenge 2: create property to get index of type of color to make the cost
+    let costStyleIndex: Int
 }
 

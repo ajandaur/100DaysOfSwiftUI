@@ -8,11 +8,9 @@
 import Foundation
 
 // Now that we have something that represents a single expense, the next step is to create something to store an array of those expense items inside a single object. This needs to conform to the ObservableObject protocol, and we’re also going to use @Published to make sure change announcements get sent whenever the items array gets modified.
-
 class Expenses: ObservableObject {
     
     // To allow user data to load again implement a custom initializer that will..
-    
     init() {
         // Attempt to read the “Items” key from UserDefaults.
         if let items = UserDefaults.standard.data(forKey: "Items") {
