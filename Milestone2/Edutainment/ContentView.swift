@@ -17,7 +17,7 @@ import SwiftUI
 
 struct ContentView: View {
     // user selects number of times tables
-    @State private var numberOfTables = 0
+    @State private var numberOfTables = 1
     
     // store the question bank
     @State private var questions = [Question]()
@@ -44,6 +44,10 @@ struct ContentView: View {
     
     @State private var currentQuestion = Question(tableNumber: 1, multiplier: 1)
     @State private var currentQuestionIndex = 0
+    
+    //animations
+    @State private var angle: Double = 0.0
+    @State private var dragAmount = CGSize.zero
     
     
     
@@ -72,6 +76,7 @@ struct ContentView: View {
                         .pickerStyle(SegmentedPickerStyle())
                         
                     }
+                    
                 } // Form
                 .navigationBarTitle(Text("Game Settings"))
                 
@@ -125,10 +130,24 @@ struct ContentView: View {
                             )
                     }
                     Spacer()
-                    Text("Score \(score)")
+                    Text("Score: \(score)")
+                        .font(.custom("Marker Felt", size: 30, relativeTo: .headline))
+                        .padding()
                     Text("Questions remaining: \(numberOfQuestions - questionCounter)")
+                        .font(.custom("Marker Felt", size: 20, relativeTo: .headline))
                     Spacer()
                     
+                    AnimalImage()
+                        .offset(dragAmount)
+                        .rotationEffect(.degrees(angle))
+                        .animation(.easeIn)
+                        .gesture(
+                            DragGesture()
+                                .onChanged { self.dragAmount = $0.translation }
+                                .onEnded { _ in self.dragAmount = .zero }
+                        )
+                        .animation(.spring())
+                        Spacer()
                 }
                 .padding()
                 .navigationBarTitle(Text("Multiplication Game"))
@@ -206,6 +225,8 @@ struct ContentView: View {
         if (answer == correctAnswer)
         {
             score += 1
+            // animate animal
+            angle += 360
         } else {
             score -= 1
         }
@@ -213,6 +234,19 @@ struct ContentView: View {
     
     
 } // content view
+
+// animal images
+struct AnimalImage: View {
+    var name = "bear"
+    
+    var animalNames = ["bear", "buffalo", "chick", "chicken", "cow", "crocodile", "dog", "duck", "elephant", "frog", "giraffe", "goat", "gorilla", "hippo", "horse", "monkey", "moose", "narwhal", "owl","panda","parrot", "penguin", "pig", "rabbit", "rhino", "sloth", "snake", "walrus", "whale", "zebra"]
+    
+    var body: some View {
+        Image(animalNames[Int.random(in: 0..<animalNames.count)])
+            .frame(width: 100, height: 100, alignment: .center)
+        
+    }
+}
 
 
 struct ContentView_Previews: PreviewProvider {
