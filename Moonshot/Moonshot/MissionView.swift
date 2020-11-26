@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MissionView: View {
+    @EnvironmentObject var missions: ListOfMissions
     
     let mission: Mission
     
@@ -56,12 +57,20 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
                     
+                    // Challenge 1: add launch date below mission badge image.
+                    VStack {
+                        Text("Mission Launch Date:")
+                        Text(mission.formattedLaunchDate)
+                    }
+                    .font(.caption)
+                
+                    
                     Text(self.mission.description)
                         .padding()
                     
                     // Now that we have all our astronaut data, we can show this directly below the mission description using a ForEach
                     ForEach(self.astronauts, id: \.role) { crewMember in
-                        NavigationLink(destination: AstronautView(astronaut: crewMember.astronaut)) {
+                        NavigationLink(destination: AstronautView(missions: self.missions, astronaut: crewMember.astronaut, missionsCompleted: [self.mission])) {
                             HStack {
                                 Image(crewMember.astronaut.id)
                                     .resizable()
@@ -73,8 +82,6 @@ struct MissionView: View {
                                     Text(crewMember.astronaut.name)
                                         .font(.headline)
                                     Text(crewMember.role)
-                                        .foregroundColor(crewMember.role == "Commander" ? .secondary : .primary)
-                                        .fontWeight(crewMember.role == "Commander" ? .bold : .none)
                                 }
                                 
                                 Spacer()

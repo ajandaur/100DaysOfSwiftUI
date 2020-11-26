@@ -20,6 +20,7 @@
 		8707258B256CA10200335ED6 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 8707258A256CA10200335ED6 /* astronauts.json */; };
 		87072590256CA10700335ED6 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8707258F256CA10700335ED6 /* missions.json */; };
 		8718E99725702E0000FB5DDB /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8718E99625702E0000FB5DDB /* AstronautView.swift */; };
+		87BE904925704D3B00CE8AFF /* ListOfMissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE904825704D3B00CE8AFF /* ListOfMissions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8707258A256CA10200335ED6 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		8707258F256CA10700335ED6 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		8718E99625702E0000FB5DDB /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		87BE904825704D3B00CE8AFF /* ListOfMissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMissions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				8718E99625702E0000FB5DDB /* AstronautView.swift */,
 				8707255E256C89C600335ED6 /* ContentView.swift */,
 				8704E4F3256D8405001CD48C /* Astronaut.swift */,
+				87BE904825704D3B00CE8AFF /* ListOfMissions.swift */,
 				8704E4F8256D85F6001CD48C /* Bundle-Decodable.swift */,
 				87072560256C89CA00335ED6 /* Assets.xcassets */,
 				8707258A256CA10200335ED6 /* astronauts.json */,
@@ -287,6 +290,7 @@
 				8707255D256C89C600335ED6 /* MoonshotApp.swift in Sources */,
 				8718E99725702E0000FB5DDB /* AstronautView.swift in Sources */,
 				8704E4FE256D89B5001CD48C /* Mission.swift in Sources */,
+				87BE904925704D3B00CE8AFF /* ListOfMissions.swift in Sources */,
 				8704E4F9256D85F6001CD48C /* Bundle-Decodable.swift in Sources */,
 				8704E506256D974D001CD48C /* MissionView.swift in Sources */,
 			);
