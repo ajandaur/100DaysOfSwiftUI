@@ -14,7 +14,7 @@ import Foundation
 
 struct Mission: Codable, Identifiable {
     // assets are accessed as apollo 1, apollo2, and so on..
-    // add computed properties here so  any other views can use the same data without having to repeat our string interpolation code, which in turn means if we change the way these things are formatted
+    // add computed properties here so any other views can use the same data without having to repeat our string interpolation code, which in turn means if we change the way these things are formatted
     var displayName: String {
         "Apollo \(id)"
     }

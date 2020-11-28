@@ -8,15 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var missions = ListOfMissions()
-    
-    // Challenge 3: toggle between launch date and crew names using a state var
-    @State private var showCrew = false
-    
     
     // used extension here instead of a method..
-    // Because we are using generics, use type annotation so Swift knows exactly
+    // Because we are using generics, use type annotation so Swift knows exactly what type we are decoding
+    
+    let missions: [Mission] = Bundle.main.decode("missions.json")
     let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
+    
+    // Challenge 3: toggle between launch date and crew names using a state var
+    @State private var showCrew = true
+    
+    // Create dictionary of crew members by mission
+    // Key:Value pair
+    var crew: [String: String] {
+           var membersByMission = [String: String]()
+           var members = ""
+           
+            // Loop through the missions
+           for mission in missions {
+               // each member in the mission's crew, add the name of members string
+               for member in mission.crew {
+                   members += member.name.capitalized + ", "
+               }
+                // replace the displayName of the mission with the members
+                // We are able to do so because Mission.displayName is a computed property
+               membersByMission[mission.displayName] = members
+               members = ""
+           }
+        
+        // return the dictionary
+           return membersByMission
+       }
     
     
     var body: some View {
@@ -29,21 +51,15 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(width: 44, height: 44)
                     
+                    // Mission name
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
                         
-                        HStack {
-                            if self.showCrew {
-                                ForEach(mission.crew, id: \.role) { member in
-                                    HStack {
-                                        Text(member.name.capitalized)
-                                    }
-                                }
-                            } else {
-                                Text(mission.formattedLaunchDate)
-                            }
-                        }
+                    // Missions subtitle: date or crew members
+                        Text(self.showCrew ? self.crew[mission.displayName] ?? "" : mission.formattedLaunchDate)
+                            .font(.subheadline)
+                    
                     }
                 }
                 .navigationBarTitle("Moonshot")
@@ -53,7 +69,7 @@ struct ContentView: View {
                                         Button(action: {
                                             self.showCrew.toggle()
                                         }) {
-                                            self.showCrew ? Text("Crew") : Text("Launch Date")
+                                            self.showCrew ? Text("Launch Date") : Text("Crew")
                                         }
                 )
             }

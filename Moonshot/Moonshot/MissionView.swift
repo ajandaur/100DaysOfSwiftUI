@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MissionView: View {
-    @EnvironmentObject var missions: ListOfMissions
     
     let mission: Mission
     
@@ -70,7 +69,7 @@ struct MissionView: View {
                     
                     // Now that we have all our astronaut data, we can show this directly below the mission description using a ForEach
                     ForEach(self.astronauts, id: \.role) { crewMember in
-                        NavigationLink(destination: AstronautView(missions: self.missions, astronaut: crewMember.astronaut, missionsCompleted: [self.mission])) {
+                        NavigationLink(destination: AstronautView( astronaut: crewMember.astronaut, missionsCompleted: [self.mission])) {
                             HStack {
                                 Image(crewMember.astronaut.id)
                                     .resizable()
