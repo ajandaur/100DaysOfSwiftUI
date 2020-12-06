@@ -2,7 +2,7 @@
 //  DrawingGroup.swift
 //  Drawing
 //
-//  Created by Anmol  Jandaur on 11/29/20.
+//  Created by Anmol Jandaur on 11/29/20.
 //
 
 import SwiftUI

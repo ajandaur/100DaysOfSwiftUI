@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		8716E3AE25757B5600F321D2 /* AnimatablePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716E3AD25757B5600F321D2 /* AnimatablePair.swift */; };
 		8716E3B32575822100F321D2 /* Spirograph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716E3B22575822100F321D2 /* Spirograph.swift */; };
+		87242DDF2576FC6500C382C8 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87242DDE2576FC6500C382C8 /* Arrow.swift */; };
 		87960CD325743F5A00813DBD /* ImagePaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87960CD225743F5A00813DBD /* ImagePaint.swift */; };
 		87960CD825744A2D00813DBD /* DrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87960CD725744A2D00813DBD /* DrawingGroup.swift */; };
 		87960CDD257450C700813DBD /* SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87960CDC257450C700813DBD /* SpecialEffects.swift */; };
 		87960CE22574577C00813DBD /* AnimatableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87960CE12574577C00813DBD /* AnimatableData.swift */; };
+		87F2CB002579D8A40043D822 /* ColorCyclingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F2CAFF2579D8A40043D822 /* ColorCyclingRectangle.swift */; };
 		87FC5C182572EFC900737088 /* DrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC5C172572EFC900737088 /* DrawingApp.swift */; };
 		87FC5C1A2572EFC900737088 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC5C192572EFC900737088 /* ContentView.swift */; };
 		87FC5C1C2572EFD200737088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FC5C1B2572EFD200737088 /* Assets.xcassets */; };
@@ -44,10 +46,12 @@
 /* Begin PBXFileReference section */
 		8716E3AD25757B5600F321D2 /* AnimatablePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePair.swift; sourceTree = "<group>"; };
 		8716E3B22575822100F321D2 /* Spirograph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spirograph.swift; sourceTree = "<group>"; };
+		87242DDE2576FC6500C382C8 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		87960CD225743F5A00813DBD /* ImagePaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaint.swift; sourceTree = "<group>"; };
 		87960CD725744A2D00813DBD /* DrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGroup.swift; sourceTree = "<group>"; };
 		87960CDC257450C700813DBD /* SpecialEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffects.swift; sourceTree = "<group>"; };
 		87960CE12574577C00813DBD /* AnimatableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableData.swift; sourceTree = "<group>"; };
+		87F2CAFF2579D8A40043D822 /* ColorCyclingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingRectangle.swift; sourceTree = "<group>"; };
 		87FC5C142572EFC900737088 /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FC5C172572EFC900737088 /* DrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingApp.swift; sourceTree = "<group>"; };
 		87FC5C192572EFC900737088 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,11 +97,6 @@
 		87FC5C0B2572EFC900737088 = {
 			isa = PBXGroup;
 			children = (
-				87960CD725744A2D00813DBD /* DrawingGroup.swift */,
-				87960CDC257450C700813DBD /* SpecialEffects.swift */,
-				87960CE12574577C00813DBD /* AnimatableData.swift */,
-				8716E3AD25757B5600F321D2 /* AnimatablePair.swift */,
-				8716E3B22575822100F321D2 /* Spirograph.swift */,
 				87FC5C162572EFC900737088 /* Drawing */,
 				87FC5C282572EFD200737088 /* DrawingTests */,
 				87FC5C332572EFD200737088 /* DrawingUITests */,
@@ -118,6 +117,13 @@
 		87FC5C162572EFC900737088 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				87960CD725744A2D00813DBD /* DrawingGroup.swift */,
+				87960CDC257450C700813DBD /* SpecialEffects.swift */,
+				87960CE12574577C00813DBD /* AnimatableData.swift */,
+				8716E3AD25757B5600F321D2 /* AnimatablePair.swift */,
+				8716E3B22575822100F321D2 /* Spirograph.swift */,
+				87242DDE2576FC6500C382C8 /* Arrow.swift */,
+				87F2CAFF2579D8A40043D822 /* ColorCyclingRectangle.swift */,
 				87FC5C172572EFC900737088 /* DrawingApp.swift */,
 				87FC5C192572EFC900737088 /* ContentView.swift */,
 				87FC5C452572F66100737088 /* PathsVsShapes.swift */,
@@ -291,12 +297,14 @@
 				87960CE22574577C00813DBD /* AnimatableData.swift in Sources */,
 				87FC5C462572F66100737088 /* PathsVsShapes.swift in Sources */,
 				87960CD325743F5A00813DBD /* ImagePaint.swift in Sources */,
+				87242DDF2576FC6500C382C8 /* Arrow.swift in Sources */,
 				87FC5C5025730A8300737088 /* CGAffineTransform.swift in Sources */,
 				87FC5C182572EFC900737088 /* DrawingApp.swift in Sources */,
 				8716E3B32575822100F321D2 /* Spirograph.swift in Sources */,
 				87FC5C4B257302E800737088 /* strokeBorder.swift in Sources */,
 				87960CD825744A2D00813DBD /* DrawingGroup.swift in Sources */,
 				8716E3AE25757B5600F321D2 /* AnimatablePair.swift in Sources */,
+				87F2CB002579D8A40043D822 /* ColorCyclingRectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
