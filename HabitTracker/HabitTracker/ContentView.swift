@@ -21,21 +21,22 @@ struct ContentView: View {
             List(0..<activities.activities.count, id:\.self) { index in
                 NavigationLink(destination:ActivityDetailView(activities: self.activities, index: index)) {
                     HStack {
+                        
+                        Image(systemName: "\(self.activities.activities[index].count).circle")
+                        
                         VStack(alignment: .leading) {
                             Text(self.activities.activities[index].title)
                                 .font(.headline)
                             Text(self.activities.activities[index].description)
                                 .font(.subheadline)
                         }
-                        Spacer()
-                        Text("\(self.activities.activities[index].count)")
                     }
                 }
             }
             .navigationBarTitle(Text("Habit Tracker"))
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        self.showingAddActivity = true
+                                        self.showingAddActivity.toggle()
                                     }, label: {
                                         Image(systemName: "plus")
                                     })

@@ -15,19 +15,29 @@ struct ActivityDetailView: View {
     @ObservedObject var activities: Activities
     var index: Int
     
+    func incrementCounter() {
+        var count = self.activities.activities[index].count
+        count += 1
+        self.activities.activities[index].count = count
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 Text("Activity Description: \(self.activities.activities[index].description)")
                     .font(.headline)
-                    .padding(10)
-                Text("Streak Count: \(self.activities.activities[index].count)")
-                    .font(.headline)
                     .padding()
-                Button("Increase streak by 1") {
-                    var count = self.activities.activities[index].count
-                    count += 1
-                    self.activities.activities[index].count = count
+                Button(action: incrementCounter) {
+                    Image(systemName: "\(activities.activities[index].count).circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .overlay(
+                                Circle()
+                                    .stroke(Color.secondary, lineWidth: 1.2)
+                        )
+                        .frame(width: 200, height: 100, alignment: .center)
+                        .foregroundColor(.blue)
+                  
                 }
                 Spacer()
             }
@@ -38,3 +48,10 @@ struct ActivityDetailView: View {
 }
 
 
+
+struct ActivityDetailView_Previews: PreviewProvider {
+    static let activity = Activity(id: UUID(), title: "test", description: "testing", count: 0)
+    static var previews: some View {
+        ActivityDetailView(activities: Activities(), index: 0)
+    }
+}
