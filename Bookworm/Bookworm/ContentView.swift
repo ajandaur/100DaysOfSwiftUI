@@ -14,14 +14,14 @@ struct ContentView: View {
     // a managed object context we can pass into AddBookView
     @Environment(\.managedObjectContext) var moc
     
-    // Fetch request sorting is performed using a new class called NSSortDescriptor, and we can create them from two values: the attribute we want to sort on, and whether it should be ascending or not. For example, we can alphabetically sort on the title attribute
+    // Fetch request sorting is performed using NSSortDescriptor, and we can create them from two values: the attribute we want to sort on, and whether it should be ascending or not. For example, we can alphabetically sort on the title attribute
     @FetchRequest(entity: Book.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Book.title, ascending: true), NSSortDescriptor(keyPath: \Book.author, ascending: false)]) var books: FetchedResults<Book>
     // Note: Having a second or even third sort field has little to no performance impact unless you have lots of data with similar values.
     
     // Boolean that tracks whether the add screen is showing or not
     @State private var showingAddScreen = false
     
-    // The final step is to to make the form dismiss itself when the user adds a book
+    // make the form dismiss itself when the user adds a book
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -54,7 +54,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 })
                 .sheet(isPresented: $showingAddScreen) {
-                    // You’ve already seen how we use the @Environment property wrapper to read values from the environment, but here we need to write values in the environment. This is done using a modifier of the same name, environment(), which takes two parameters: a key to write to, and the value you want to send in.
+                    //  We need to write values in the environment. This is done using a modifier of the same name, environment(), which takes two parameters: a key to write to, and the value you want to send in.
                     AddBookView().environment(\.managedObjectContext, self.moc)
                     // For the key we can just send in the one we’ve been using all along, \.managedObjectContext, and for the value we can pass in our own moc property – we’re effectively just forwarding it on. 
                 }

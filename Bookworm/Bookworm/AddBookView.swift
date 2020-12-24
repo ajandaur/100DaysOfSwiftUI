@@ -55,7 +55,7 @@ struct AddBookView: View {
                     Button("Save") {
                         // create an instance of the Book class using our managed object context, copy in all the values from our form (converting rating to an Int16 to match Core Data)
                         let newBook = Book(context: self.moc)
-                        // Challenge 3: copy value of date
+                        // Challenge 3: copy value of date as well 
                         newBook.date = self.date
                         newBook.title = self.title
                         newBook.author = self.author
