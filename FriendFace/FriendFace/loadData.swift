@@ -16,6 +16,8 @@ class Users {
 
     static func loadData(moc: NSManagedObjectContext) {
 
+        // load data from JSON
+        // put it in the main dispatchQueue
         loadDataFromJSON { (users) in
             DispatchQueue.main.async {
 
@@ -39,8 +41,6 @@ class Users {
                         //Make the relationship link to the user
                         cdUser.addToFriends(cdFriend)
                     }
-
-                    print("User Loaded: \(user)\n\n")
                     tempUsers.append(cdUser)
                 }
 
@@ -63,7 +63,6 @@ class Users {
         }
 
         let urlRequest = URLRequest(url: url)
-        print("Getting data...")
 
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
 
@@ -73,7 +72,6 @@ class Users {
 
             guard let data = data else { return }
 
-            print("Data Retrieved: \(data.count)")
             if let decodedUsers = try? JSONDecoder().decode([LoadedUser].self, from: data) {
 
                 print("Users Parsed: \(decodedUsers.count)")

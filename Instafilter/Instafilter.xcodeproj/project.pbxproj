@@ -7,70 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87C41FD92594148900A4DAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FD82594148900A4DAB4 /* AppDelegate.swift */; };
-		87C41FDB2594148900A4DAB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FDA2594148900A4DAB4 /* SceneDelegate.swift */; };
-		87C41FDD2594148900A4DAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FDC2594148900A4DAB4 /* ContentView.swift */; };
-		87C41FE02594148900A4DAB4 /* Instafilter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FDE2594148900A4DAB4 /* Instafilter.xcdatamodeld */; };
-		87C41FE22594148C00A4DAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87C41FE12594148C00A4DAB4 /* Assets.xcassets */; };
-		87C41FE52594148C00A4DAB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87C41FE42594148C00A4DAB4 /* Preview Assets.xcassets */; };
-		87C41FE82594148C00A4DAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87C41FE62594148C00A4DAB4 /* LaunchScreen.storyboard */; };
-		87C41FF32594148D00A4DAB4 /* InstafilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FF22594148D00A4DAB4 /* InstafilterTests.swift */; };
-		87C41FFE2594148D00A4DAB4 /* InstafilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C41FFD2594148D00A4DAB4 /* InstafilterUITests.swift */; };
-		87C4200F2594457D00A4DAB4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4200E2594457D00A4DAB4 /* ImagePicker.swift */; };
+		87810C562595D2FF000C080F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C552595D2FF000C080F /* AppDelegate.swift */; };
+		87810C582595D2FF000C080F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C572595D2FF000C080F /* SceneDelegate.swift */; };
+		87810C5A2595D2FF000C080F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C592595D2FF000C080F /* ContentView.swift */; };
+		87810C5D2595D2FF000C080F /* Instafilter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87810C5B2595D2FF000C080F /* Instafilter.xcdatamodeld */; };
+		87810C5F2595D303000C080F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87810C5E2595D303000C080F /* Assets.xcassets */; };
+		87810C622595D303000C080F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87810C612595D303000C080F /* Preview Assets.xcassets */; };
+		87810C652595D303000C080F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87810C632595D303000C080F /* LaunchScreen.storyboard */; };
+		87810C702595D303000C080F /* InstafilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C6F2595D303000C080F /* InstafilterTests.swift */; };
+		87810C7B2595D303000C080F /* InstafilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C7A2595D303000C080F /* InstafilterUITests.swift */; };
+		87810C8C2595D322000C080F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C8B2595D322000C080F /* ImagePicker.swift */; };
+		87810C92259707B7000C080F /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87810C91259707B7000C080F /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87C41FEF2594148C00A4DAB4 /* PBXContainerItemProxy */ = {
+		87810C6C2595D303000C080F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87C41FCD2594148800A4DAB4 /* Project object */;
+			containerPortal = 87810C4A2595D2FF000C080F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87C41FD42594148800A4DAB4;
+			remoteGlobalIDString = 87810C512595D2FF000C080F;
 			remoteInfo = Instafilter;
 		};
-		87C41FFA2594148D00A4DAB4 /* PBXContainerItemProxy */ = {
+		87810C772595D303000C080F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87C41FCD2594148800A4DAB4 /* Project object */;
+			containerPortal = 87810C4A2595D2FF000C080F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87C41FD42594148800A4DAB4;
+			remoteGlobalIDString = 87810C512595D2FF000C080F;
 			remoteInfo = Instafilter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87C41FD52594148900A4DAB4 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87C41FD82594148900A4DAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87C41FDA2594148900A4DAB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87C41FDC2594148900A4DAB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87C41FDF2594148900A4DAB4 /* Instafilter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Instafilter.xcdatamodel; sourceTree = "<group>"; };
-		87C41FE12594148C00A4DAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87C41FE42594148C00A4DAB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		87C41FE72594148C00A4DAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87C41FE92594148C00A4DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87C41FEE2594148C00A4DAB4 /* InstafilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87C41FF22594148D00A4DAB4 /* InstafilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterTests.swift; sourceTree = "<group>"; };
-		87C41FF42594148D00A4DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87C41FF92594148D00A4DAB4 /* InstafilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87C41FFD2594148D00A4DAB4 /* InstafilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterUITests.swift; sourceTree = "<group>"; };
-		87C41FFF2594148D00A4DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87C4200E2594457D00A4DAB4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = SOURCE_ROOT; };
+		87810C522595D2FF000C080F /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87810C552595D2FF000C080F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87810C572595D2FF000C080F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		87810C592595D2FF000C080F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87810C5C2595D2FF000C080F /* Instafilter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Instafilter.xcdatamodel; sourceTree = "<group>"; };
+		87810C5E2595D303000C080F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87810C612595D303000C080F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87810C642595D303000C080F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87810C662595D303000C080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87810C6B2595D303000C080F /* InstafilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87810C6F2595D303000C080F /* InstafilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterTests.swift; sourceTree = "<group>"; };
+		87810C712595D303000C080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87810C762595D303000C080F /* InstafilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87810C7A2595D303000C080F /* InstafilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterUITests.swift; sourceTree = "<group>"; };
+		87810C7C2595D303000C080F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87810C8B2595D322000C080F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		87810C91259707B7000C080F /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87C41FD22594148800A4DAB4 /* Frameworks */ = {
+		87810C4F2595D2FF000C080F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FEB2594148C00A4DAB4 /* Frameworks */ = {
+		87810C682595D303000C080F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FF62594148D00A4DAB4 /* Frameworks */ = {
+		87810C732595D303000C080F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,64 +82,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87C41FCC2594148800A4DAB4 = {
+		87810C492595D2FF000C080F = {
 			isa = PBXGroup;
 			children = (
-				87C41FD72594148900A4DAB4 /* Instafilter */,
-				87C41FF12594148D00A4DAB4 /* InstafilterTests */,
-				87C41FFC2594148D00A4DAB4 /* InstafilterUITests */,
-				87C41FD62594148900A4DAB4 /* Products */,
+				87810C542595D2FF000C080F /* Instafilter */,
+				87810C6E2595D303000C080F /* InstafilterTests */,
+				87810C792595D303000C080F /* InstafilterUITests */,
+				87810C532595D2FF000C080F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		87C41FD62594148900A4DAB4 /* Products */ = {
+		87810C532595D2FF000C080F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87C41FD52594148900A4DAB4 /* Instafilter.app */,
-				87C41FEE2594148C00A4DAB4 /* InstafilterTests.xctest */,
-				87C41FF92594148D00A4DAB4 /* InstafilterUITests.xctest */,
+				87810C522595D2FF000C080F /* Instafilter.app */,
+				87810C6B2595D303000C080F /* InstafilterTests.xctest */,
+				87810C762595D303000C080F /* InstafilterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87C41FD72594148900A4DAB4 /* Instafilter */ = {
+		87810C542595D2FF000C080F /* Instafilter */ = {
 			isa = PBXGroup;
 			children = (
-				87C4200E2594457D00A4DAB4 /* ImagePicker.swift */,
-				87C41FD82594148900A4DAB4 /* AppDelegate.swift */,
-				87C41FDA2594148900A4DAB4 /* SceneDelegate.swift */,
-				87C41FDC2594148900A4DAB4 /* ContentView.swift */,
-				87C41FE12594148C00A4DAB4 /* Assets.xcassets */,
-				87C41FE62594148C00A4DAB4 /* LaunchScreen.storyboard */,
-				87C41FE92594148C00A4DAB4 /* Info.plist */,
-				87C41FDE2594148900A4DAB4 /* Instafilter.xcdatamodeld */,
-				87C41FE32594148C00A4DAB4 /* Preview Content */,
+				87810C552595D2FF000C080F /* AppDelegate.swift */,
+				87810C91259707B7000C080F /* ImageSaver.swift */,
+				87810C572595D2FF000C080F /* SceneDelegate.swift */,
+				87810C592595D2FF000C080F /* ContentView.swift */,
+				87810C8B2595D322000C080F /* ImagePicker.swift */,
+				87810C5E2595D303000C080F /* Assets.xcassets */,
+				87810C632595D303000C080F /* LaunchScreen.storyboard */,
+				87810C662595D303000C080F /* Info.plist */,
+				87810C5B2595D2FF000C080F /* Instafilter.xcdatamodeld */,
+				87810C602595D303000C080F /* Preview Content */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
 		};
-		87C41FE32594148C00A4DAB4 /* Preview Content */ = {
+		87810C602595D303000C080F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				87C41FE42594148C00A4DAB4 /* Preview Assets.xcassets */,
+				87810C612595D303000C080F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		87C41FF12594148D00A4DAB4 /* InstafilterTests */ = {
+		87810C6E2595D303000C080F /* InstafilterTests */ = {
 			isa = PBXGroup;
 			children = (
-				87C41FF22594148D00A4DAB4 /* InstafilterTests.swift */,
-				87C41FF42594148D00A4DAB4 /* Info.plist */,
+				87810C6F2595D303000C080F /* InstafilterTests.swift */,
+				87810C712595D303000C080F /* Info.plist */,
 			);
 			path = InstafilterTests;
 			sourceTree = "<group>";
 		};
-		87C41FFC2594148D00A4DAB4 /* InstafilterUITests */ = {
+		87810C792595D303000C080F /* InstafilterUITests */ = {
 			isa = PBXGroup;
 			children = (
-				87C41FFD2594148D00A4DAB4 /* InstafilterUITests.swift */,
-				87C41FFF2594148D00A4DAB4 /* Info.plist */,
+				87810C7A2595D303000C080F /* InstafilterUITests.swift */,
+				87810C7C2595D303000C080F /* Info.plist */,
 			);
 			path = InstafilterUITests;
 			sourceTree = "<group>";
@@ -145,13 +148,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87C41FD42594148800A4DAB4 /* Instafilter */ = {
+		87810C512595D2FF000C080F /* Instafilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87C420022594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "Instafilter" */;
+			buildConfigurationList = 87810C7F2595D303000C080F /* Build configuration list for PBXNativeTarget "Instafilter" */;
 			buildPhases = (
-				87C41FD12594148800A4DAB4 /* Sources */,
-				87C41FD22594148800A4DAB4 /* Frameworks */,
-				87C41FD32594148800A4DAB4 /* Resources */,
+				87810C4E2595D2FF000C080F /* Sources */,
+				87810C4F2595D2FF000C080F /* Frameworks */,
+				87810C502595D2FF000C080F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -159,68 +162,68 @@
 			);
 			name = Instafilter;
 			productName = Instafilter;
-			productReference = 87C41FD52594148900A4DAB4 /* Instafilter.app */;
+			productReference = 87810C522595D2FF000C080F /* Instafilter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		87C41FED2594148C00A4DAB4 /* InstafilterTests */ = {
+		87810C6A2595D303000C080F /* InstafilterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87C420052594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "InstafilterTests" */;
+			buildConfigurationList = 87810C822595D303000C080F /* Build configuration list for PBXNativeTarget "InstafilterTests" */;
 			buildPhases = (
-				87C41FEA2594148C00A4DAB4 /* Sources */,
-				87C41FEB2594148C00A4DAB4 /* Frameworks */,
-				87C41FEC2594148C00A4DAB4 /* Resources */,
+				87810C672595D303000C080F /* Sources */,
+				87810C682595D303000C080F /* Frameworks */,
+				87810C692595D303000C080F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87C41FF02594148C00A4DAB4 /* PBXTargetDependency */,
+				87810C6D2595D303000C080F /* PBXTargetDependency */,
 			);
 			name = InstafilterTests;
 			productName = InstafilterTests;
-			productReference = 87C41FEE2594148C00A4DAB4 /* InstafilterTests.xctest */;
+			productReference = 87810C6B2595D303000C080F /* InstafilterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87C41FF82594148D00A4DAB4 /* InstafilterUITests */ = {
+		87810C752595D303000C080F /* InstafilterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87C420082594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "InstafilterUITests" */;
+			buildConfigurationList = 87810C852595D303000C080F /* Build configuration list for PBXNativeTarget "InstafilterUITests" */;
 			buildPhases = (
-				87C41FF52594148D00A4DAB4 /* Sources */,
-				87C41FF62594148D00A4DAB4 /* Frameworks */,
-				87C41FF72594148D00A4DAB4 /* Resources */,
+				87810C722595D303000C080F /* Sources */,
+				87810C732595D303000C080F /* Frameworks */,
+				87810C742595D303000C080F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87C41FFB2594148D00A4DAB4 /* PBXTargetDependency */,
+				87810C782595D303000C080F /* PBXTargetDependency */,
 			);
 			name = InstafilterUITests;
 			productName = InstafilterUITests;
-			productReference = 87C41FF92594148D00A4DAB4 /* InstafilterUITests.xctest */;
+			productReference = 87810C762595D303000C080F /* InstafilterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		87C41FCD2594148800A4DAB4 /* Project object */ = {
+		87810C4A2595D2FF000C080F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					87C41FD42594148800A4DAB4 = {
+					87810C512595D2FF000C080F = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					87C41FED2594148C00A4DAB4 = {
+					87810C6A2595D303000C080F = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 87C41FD42594148800A4DAB4;
+						TestTargetID = 87810C512595D2FF000C080F;
 					};
-					87C41FF82594148D00A4DAB4 = {
+					87810C752595D303000C080F = {
 						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 87C41FD42594148800A4DAB4;
+						TestTargetID = 87810C512595D2FF000C080F;
 					};
 				};
 			};
-			buildConfigurationList = 87C41FD02594148800A4DAB4 /* Build configuration list for PBXProject "Instafilter" */;
+			buildConfigurationList = 87810C4D2595D2FF000C080F /* Build configuration list for PBXProject "Instafilter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,37 +231,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 87C41FCC2594148800A4DAB4;
-			productRefGroup = 87C41FD62594148900A4DAB4 /* Products */;
+			mainGroup = 87810C492595D2FF000C080F;
+			productRefGroup = 87810C532595D2FF000C080F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87C41FD42594148800A4DAB4 /* Instafilter */,
-				87C41FED2594148C00A4DAB4 /* InstafilterTests */,
-				87C41FF82594148D00A4DAB4 /* InstafilterUITests */,
+				87810C512595D2FF000C080F /* Instafilter */,
+				87810C6A2595D303000C080F /* InstafilterTests */,
+				87810C752595D303000C080F /* InstafilterUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		87C41FD32594148800A4DAB4 /* Resources */ = {
+		87810C502595D2FF000C080F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C41FE82594148C00A4DAB4 /* LaunchScreen.storyboard in Resources */,
-				87C41FE52594148C00A4DAB4 /* Preview Assets.xcassets in Resources */,
-				87C41FE22594148C00A4DAB4 /* Assets.xcassets in Resources */,
+				87810C652595D303000C080F /* LaunchScreen.storyboard in Resources */,
+				87810C622595D303000C080F /* Preview Assets.xcassets in Resources */,
+				87810C5F2595D303000C080F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FEC2594148C00A4DAB4 /* Resources */ = {
+		87810C692595D303000C080F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FF72594148D00A4DAB4 /* Resources */ = {
+		87810C742595D303000C080F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,54 +271,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		87C41FD12594148800A4DAB4 /* Sources */ = {
+		87810C4E2595D2FF000C080F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C41FD92594148900A4DAB4 /* AppDelegate.swift in Sources */,
-				87C41FE02594148900A4DAB4 /* Instafilter.xcdatamodeld in Sources */,
-				87C4200F2594457D00A4DAB4 /* ImagePicker.swift in Sources */,
-				87C41FDB2594148900A4DAB4 /* SceneDelegate.swift in Sources */,
-				87C41FDD2594148900A4DAB4 /* ContentView.swift in Sources */,
+				87810C92259707B7000C080F /* ImageSaver.swift in Sources */,
+				87810C562595D2FF000C080F /* AppDelegate.swift in Sources */,
+				87810C5D2595D2FF000C080F /* Instafilter.xcdatamodeld in Sources */,
+				87810C8C2595D322000C080F /* ImagePicker.swift in Sources */,
+				87810C582595D2FF000C080F /* SceneDelegate.swift in Sources */,
+				87810C5A2595D2FF000C080F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FEA2594148C00A4DAB4 /* Sources */ = {
+		87810C672595D303000C080F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C41FF32594148D00A4DAB4 /* InstafilterTests.swift in Sources */,
+				87810C702595D303000C080F /* InstafilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C41FF52594148D00A4DAB4 /* Sources */ = {
+		87810C722595D303000C080F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C41FFE2594148D00A4DAB4 /* InstafilterUITests.swift in Sources */,
+				87810C7B2595D303000C080F /* InstafilterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87C41FF02594148C00A4DAB4 /* PBXTargetDependency */ = {
+		87810C6D2595D303000C080F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87C41FD42594148800A4DAB4 /* Instafilter */;
-			targetProxy = 87C41FEF2594148C00A4DAB4 /* PBXContainerItemProxy */;
+			target = 87810C512595D2FF000C080F /* Instafilter */;
+			targetProxy = 87810C6C2595D303000C080F /* PBXContainerItemProxy */;
 		};
-		87C41FFB2594148D00A4DAB4 /* PBXTargetDependency */ = {
+		87810C782595D303000C080F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87C41FD42594148800A4DAB4 /* Instafilter */;
-			targetProxy = 87C41FFA2594148D00A4DAB4 /* PBXContainerItemProxy */;
+			target = 87810C512595D2FF000C080F /* Instafilter */;
+			targetProxy = 87810C772595D303000C080F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		87C41FE62594148C00A4DAB4 /* LaunchScreen.storyboard */ = {
+		87810C632595D303000C080F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				87C41FE72594148C00A4DAB4 /* Base */,
+				87810C642595D303000C080F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,7 +327,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		87C420002594148D00A4DAB4 /* Debug */ = {
+		87810C7D2595D303000C080F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,7 +388,7 @@
 			};
 			name = Debug;
 		};
-		87C420012594148D00A4DAB4 /* Release */ = {
+		87810C7E2595D303000C080F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -439,7 +443,7 @@
 			};
 			name = Release;
 		};
-		87C420032594148D00A4DAB4 /* Debug */ = {
+		87810C802595D303000C080F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -460,7 +464,7 @@
 			};
 			name = Debug;
 		};
-		87C420042594148D00A4DAB4 /* Release */ = {
+		87810C812595D303000C080F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -481,7 +485,7 @@
 			};
 			name = Release;
 		};
-		87C420062594148D00A4DAB4 /* Debug */ = {
+		87810C832595D303000C080F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -503,7 +507,7 @@
 			};
 			name = Debug;
 		};
-		87C420072594148D00A4DAB4 /* Release */ = {
+		87810C842595D303000C080F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -525,7 +529,7 @@
 			};
 			name = Release;
 		};
-		87C420092594148D00A4DAB4 /* Debug */ = {
+		87810C862595D303000C080F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -545,7 +549,7 @@
 			};
 			name = Debug;
 		};
-		87C4200A2594148D00A4DAB4 /* Release */ = {
+		87810C872595D303000C080F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -568,38 +572,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87C41FD02594148800A4DAB4 /* Build configuration list for PBXProject "Instafilter" */ = {
+		87810C4D2595D2FF000C080F /* Build configuration list for PBXProject "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87C420002594148D00A4DAB4 /* Debug */,
-				87C420012594148D00A4DAB4 /* Release */,
+				87810C7D2595D303000C080F /* Debug */,
+				87810C7E2595D303000C080F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87C420022594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "Instafilter" */ = {
+		87810C7F2595D303000C080F /* Build configuration list for PBXNativeTarget "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87C420032594148D00A4DAB4 /* Debug */,
-				87C420042594148D00A4DAB4 /* Release */,
+				87810C802595D303000C080F /* Debug */,
+				87810C812595D303000C080F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87C420052594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "InstafilterTests" */ = {
+		87810C822595D303000C080F /* Build configuration list for PBXNativeTarget "InstafilterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87C420062594148D00A4DAB4 /* Debug */,
-				87C420072594148D00A4DAB4 /* Release */,
+				87810C832595D303000C080F /* Debug */,
+				87810C842595D303000C080F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87C420082594148D00A4DAB4 /* Build configuration list for PBXNativeTarget "InstafilterUITests" */ = {
+		87810C852595D303000C080F /* Build configuration list for PBXNativeTarget "InstafilterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87C420092594148D00A4DAB4 /* Debug */,
-				87C4200A2594148D00A4DAB4 /* Release */,
+				87810C862595D303000C080F /* Debug */,
+				87810C872595D303000C080F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -607,17 +611,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		87C41FDE2594148900A4DAB4 /* Instafilter.xcdatamodeld */ = {
+		87810C5B2595D2FF000C080F /* Instafilter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				87C41FDF2594148900A4DAB4 /* Instafilter.xcdatamodel */,
+				87810C5C2595D2FF000C080F /* Instafilter.xcdatamodel */,
 			);
-			currentVersion = 87C41FDF2594148900A4DAB4 /* Instafilter.xcdatamodel */;
+			currentVersion = 87810C5C2595D2FF000C080F /* Instafilter.xcdatamodel */;
 			path = Instafilter.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 87C41FCD2594148800A4DAB4 /* Project object */;
+	rootObject = 87810C4A2595D2FF000C080F /* Project object */;
 }
