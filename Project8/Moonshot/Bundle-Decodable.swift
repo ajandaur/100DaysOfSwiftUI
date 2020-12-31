@@ -9,6 +9,23 @@ import Foundation
 
 // convert astronauts.json into an array of Astronaut instances
 
+// document directory put into extension of FileManager for any T: Codable
+extension FileManager {
+    
+    
+    func getDocumentDirectory<T: Codable>(_ file: String) -> T {
+        
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        guard let path = try? paths[0] else {
+            fatalError("Failed to get documents directory")
+        }
+        return path as! T
+    }
+    
+    
+}
+
 
 extension Bundle {
     
