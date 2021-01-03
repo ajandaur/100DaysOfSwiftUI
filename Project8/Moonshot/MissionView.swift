@@ -56,12 +56,17 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
                     
+                        .accessibility(hidden: true)
+                    
                     // Challenge 1: add launch date below mission badge image.
                     VStack {
                         Text("Mission Launch Date:")
                         Text(mission.formattedLaunchDate)
                     }
                     .font(.caption)
+                    .accessibilityElement(children: .ignore)
+                    .accessibility(label: Text("Mission Launch Date: mission.formattedLaunchDate"))
+
                 
                     
                     Text(self.mission.description)
@@ -77,11 +82,16 @@ struct MissionView: View {
                                     .clipShape(Capsule())
                                     .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
                                 
+                                    .accessibility(hidden: true)
+                                
                                 VStack(alignment: .leading) {
                                     Text(crewMember.astronaut.name)
                                         .font(.headline)
                                     Text(crewMember.role)
                                 }
+                                .accessibilityElement(children: .ignore)
+                                .accessibility(label: Text("\(crewMember.astronaut.name)"))
+                                .accessibility(hint: Text("\(crewMember.role)"))
                                 
                                 Spacer()
                             } // HStack

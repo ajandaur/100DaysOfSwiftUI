@@ -43,6 +43,8 @@ struct AstronautView: View {
                         .scaledToFit()
                         .frame(width: geometry.size.width)
                     
+                        .accessibility(hidden: true)
+                    
                     // Challenge 2: list all the missions this astronaut has been on
                     Text("Missions Flown: ")
                         .font(.caption2)

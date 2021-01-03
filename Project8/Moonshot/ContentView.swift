@@ -51,6 +51,8 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(width: 44, height: 44)
                     
+                        .accessibility(hidden: true)
+                    
                     // Mission name
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
@@ -61,6 +63,10 @@ struct ContentView: View {
                             .font(.subheadline)
                     
                     }
+                    .accessibilityElement(children: .ignore)
+                    // accessibility depending on whether launch date or crew member details are showing
+                    .accessibility(label: Text("Mission name is \(mission.displayName)"))
+                    .accessibility(hint: self.showCrew ? Text("Crew members are \(self.crew[mission.displayName] ?? "")") : Text("mission date is \(mission.formattedLaunchDate)"))
                 }
                 .navigationBarTitle("Moonshot")
                 

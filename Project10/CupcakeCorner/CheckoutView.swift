@@ -28,6 +28,9 @@ struct CheckoutView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geo.size.width)
+                        
+                    // hide the image from VoiceOver
+                        .accessibility(hidden: true)
                     
                     Text("Your total is $\(self.orderWrapper.order.cost, specifier: "%.2f")")
                         .font(.title)

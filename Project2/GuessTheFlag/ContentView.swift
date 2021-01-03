@@ -10,6 +10,21 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // MARK: Accessibility Modification: create a dictionary with country names as keys and accessibility labels as values
+    let labels = [
+        "Estonia": "Flag with three horizontal stripes of equal size. Top stripe blue, middle stripe black, bottom stripe white",
+        "France": "Flag with three vertical stripes of equal size. Left stripe blue, middle stripe white, right stripe red",
+        "Germany": "Flag with three horizontal stripes of equal size. Top stripe black, middle stripe red, bottom stripe gold",
+        "Ireland": "Flag with three vertical stripes of equal size. Left stripe green, middle stripe white, right stripe orange",
+        "Italy": "Flag with three vertical stripes of equal size. Left stripe green, middle stripe white, right stripe red",
+        "Nigeria": "Flag with three vertical stripes of equal size. Left stripe green, middle stripe white, right stripe green",
+        "Poland": "Flag with two horizontal stripes of equal size. Top stripe white, bottom stripe red",
+        "Russia": "Flag with three horizontal stripes of equal size. Top stripe white, middle stripe blue, bottom stripe red",
+        "Spain": "Flag with three horizontal stripes. Top thin stripe red, middle thick stripe gold with a crest on the left, bottom thin stripe red",
+        "UK": "Flag with overlapping red and white crosses, both straight and diagonally, on a blue background",
+        "US": "Flag with red and white stripes of equal size, with white stars on a blue background in the top-left corner"
+    ]
+    
     // If you are changing properties of a view, you need to mark it with @State
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland","Italy","Nigeria","Poland","Russia","Spain","UK","US"].shuffled()
@@ -53,7 +68,17 @@ struct ContentView: View {
                     // Challenge 2
                     .animation(Animation.easeOut).opacity(self.correctAnswer != number ? self.opacity : 1.0)
                     .animation(Animation.interpolatingSpring(stiffness: 5, damping: 1)).scaleEffect(!self.isCorrect && self.buttonTapped == number ? 0.5 : 1.0)
+                    
+                    // MARK: accessibility modifier that reads out description of the image flag
+                    
+                    // Use self.countries[number] to get the name of the country for the current flag.
+                    // Use that name as the key for self.labels.
+                   // Provide a string to use as a default if somehow the country name doesn’t exist in the dictionary. (This should never happen, but there’s no harm being safe!)
+                    // Convert the final string to a text view.
+                    .accessibility(label: Text(self.labels[self.countries[number], default: "Unknown flag"]))
                 }
+                
+                
                 VStack {
                     Text("Score: \(userScore)")
                         .foregroundColor(.white)

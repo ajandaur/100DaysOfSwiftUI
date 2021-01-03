@@ -168,9 +168,14 @@ struct ContentView: View {
                     .padding()
                     .autocapitalization(.none)
                 
-                List(usedWords, id: \.self) {
-                    Image(systemName: "\($0.count).circle")
-                    Text($0)
+                List(usedWords, id: \.self) { word in
+                    HStack {
+                        Image(systemName: "\(word.count).circle")
+                        Text(word)
+                    }
+                    // MARK: Accessibilty modification to group items into a single group where children are ignored by VoiceOver and label is added
+                    .accessibilityElement(children: .ignore)
+                    .accessibility(label: Text("\(word), \(word.count) letters"))
                 }
                 
                 // Challenge 3: put a text view below the List so you can track and show player's score for given root word
