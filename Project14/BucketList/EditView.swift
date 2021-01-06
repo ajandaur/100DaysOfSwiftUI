@@ -12,7 +12,7 @@ struct EditView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var placemark: MKPointAnnotation
     
-    // enum to store the load state so taht we can show "Loading" text view
+    // enum to store the load state so that we can show "Loading" text view
     enum LoadingState {
         case loading, loaded, failed
     }
