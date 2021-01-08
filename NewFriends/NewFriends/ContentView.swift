@@ -14,7 +14,7 @@ import CoreLocation
 struct ContentView: View {
     
     // hold all the contacts
-    @State private var newFriends: [newFriend]
+    @State private var newFriends: [NewFriend] = NewFriendSaver.loadData()
     
     // Boolean that tracks whether the imagePicker is shown
     @State private var showImagePicker = false
@@ -75,6 +75,7 @@ struct ContentView: View {
                             self.noImagePresent = true
                             return
                         }
+                        guard let _ = self.image else { return }
                         guard !firstName.isEmpty && !lastName.isEmpty else { return }
                         
                         // save the data
@@ -87,15 +88,18 @@ struct ContentView: View {
                         saver.errorHandler = {
                             print("Opps: \($0.localizedDescription)")
                         }
-                        
-                        save.writeToPhotoAlbum(image: image)
-                        
-                        }
+                
+                        saver.saveData(image: inputImage!, firstName: firstName, lastName: lastName)
+                        newFriends = NewFriendSaver.loadData()
                     }
                 }
+            }
             .padding([.horizontal, .bottom])
             .navigationBarTitle("New Friends")
-            
+            .navigationBarItems(trailing: NavigationLink(destination: ListView(friends: newFriends), label: {
+                Image(systemName: "list.dash")
+            })
+            )
             // alert when there is no image present
             .alert(isPresented: $noImagePresent) {
                 Alert(title: Text("Error"), message: Text("Could not save - no image selected"), dismissButton: .default(Text("Continue")))
@@ -105,41 +109,15 @@ struct ContentView: View {
                 ImagePicker(image: self.$inputImage)
             }
             
-            } // NavView
-        } // ContentView
+        } // NavView
+    } // ContentView
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
     }
     
-    func getDocumentsDirectory() -> URL {
-        // find all possible documents directories for this user
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-
-        // just send back the first one, which ought to be the only one
-        return paths[0]
-    }
     
-    func save(_ userData: Data, withName name: String) {
-        let filename = getDocumentsDirectory().appendingPathComponent(name)
-        
-        do {
-            try userData.write(to: filename, options: .atomicWrite)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func load(withName name: String) -> [Prospect]? {
-        let url = getDocumentsDirectory().appendingPathComponent(name)
-        if let data = try? Data(contentsOf: url) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                return decoded
-            }
-        }
-        return nil
-    }
     
 }
 

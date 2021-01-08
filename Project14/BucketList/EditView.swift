@@ -46,7 +46,7 @@ struct EditView: View {
                 }
             }
             
-            // if we're still here it means the reuqest failed somehow
+            // if we're still here it means the request failed somehow
             self.loadingState = .failed
         }.resume()
     }
