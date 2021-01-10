@@ -10,7 +10,7 @@ import SwiftUI
 struct ListView: View {
     
     // pass in the friends array
-    var friends: [NewFriend]
+    @State var friends: [NewFriend]
     
     
     func getImage(friend: NewFriend) -> UIImage? {
@@ -19,6 +19,10 @@ struct ListView: View {
         guard let data = try? Data(contentsOf: imageUrl) else { return nil }
         guard let uiImage = UIImage(data: data) else { return  nil }
             return uiImage
+    }
+    
+     func removeFriends(at offsets: IndexSet) {
+        friends.remove(atOffsets: offsets)
     }
     
     var body: some View {
@@ -31,15 +35,21 @@ struct ListView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 80, height: 80)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                            .overlay(Circle().stroke(Color.blue, lineWidth: 5))
+                            
                            
                             .padding()
                         Text("\(friend.lastName), \(friend.firstName)")
+                            .font(.title)
                     }
                    
                 }
                     
                                 
             }
+            .onDelete(perform: removeFriends)
             
         }
     }

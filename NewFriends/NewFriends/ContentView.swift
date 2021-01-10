@@ -37,6 +37,9 @@ struct ContentView: View {
     // SF symbol save icon
     let saveIcon = UIImage(systemName: "square.and.arrow.down.fill")
     
+    // locationFetcher
+    let locationFetcher = LocationFetcher()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -70,6 +73,19 @@ struct ContentView: View {
                     Image(uiImage: saveIcon!)
                     Button("Save")
                     {
+                        
+                        
+                        var lat: Double?
+                        var long: Double?
+                        
+                        if let location = self.locationFetcher.lastKnownLocation {
+                            lat = location.latitude
+                            long = location.longitude
+                                           print("Your location is \(location)")
+                                       } else {
+                                           print("Your location is unknown")
+                                       }
+                        
                         // check to see if image is present
                         guard self.image != nil else {
                             self.noImagePresent = true
@@ -81,15 +97,9 @@ struct ContentView: View {
                         // save the data
                         let saver = NewFriendSaver()
                         
-                        saver.successHandler = {
-                            print("Success")
-                        }
-                        
-                        saver.errorHandler = {
-                            print("Opps: \($0.localizedDescription)")
-                        }
+            
                 
-                        saver.saveData(image: inputImage!, firstName: firstName, lastName: lastName)
+                        saver.saveData(image: inputImage!, firstName: firstName, lastName: lastName, latitude: lat!, longitude: long!)
                         newFriends = NewFriendSaver.loadData()
                     }
                 }
@@ -110,6 +120,8 @@ struct ContentView: View {
             }
             
         } // NavView
+        .onAppear(// start the locationFetcher
+            perform: locationFetcher.start)
     } // ContentView
     
     func loadImage() {

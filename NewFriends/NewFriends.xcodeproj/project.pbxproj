@@ -19,6 +19,7 @@
 		879FA2D425A552CE00C3FCE1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FA2D325A552CE00C3FCE1 /* ImagePicker.swift */; };
 		879FA2DE25A5545E00C3FCE1 /* photoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FA2DD25A5545E00C3FCE1 /* photoDetailView.swift */; };
 		87B8BF6225A6440A00D938EB /* NewFriendSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B8BF6125A6440A00D938EB /* NewFriendSaver.swift */; };
+		87CF898425AA2A0C00735A0D /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF898325AA2A0C00735A0D /* LocationFetcher.swift */; };
 		87F3124625A7D7D800B56F4C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3124525A7D7D800B56F4C /* ListView.swift */; };
 		87F3124E25A7EBF600B56F4C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3124D25A7EBF600B56F4C /* MapView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		879FA2D325A552CE00C3FCE1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		879FA2DD25A5545E00C3FCE1 /* photoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoDetailView.swift; sourceTree = "<group>"; };
 		87B8BF6125A6440A00D938EB /* NewFriendSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendSaver.swift; sourceTree = SOURCE_ROOT; };
+		87CF898325AA2A0C00735A0D /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		87F3124525A7D7D800B56F4C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		87F3124D25A7EBF600B56F4C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				8726C51D25A166520003F77C /* SceneDelegate.swift */,
 				8726C51F25A166520003F77C /* ContentView.swift */,
 				87F3124525A7D7D800B56F4C /* ListView.swift */,
+				87CF898325AA2A0C00735A0D /* LocationFetcher.swift */,
 				879FA2DD25A5545E00C3FCE1 /* photoDetailView.swift */,
 				879FA2D325A552CE00C3FCE1 /* ImagePicker.swift */,
 				879FA2CE25A54E1C00C3FCE1 /* NewFriend.swift */,
@@ -286,6 +289,7 @@
 			files = (
 				879FA2CF25A54E1C00C3FCE1 /* NewFriend.swift in Sources */,
 				8726C51C25A166520003F77C /* AppDelegate.swift in Sources */,
+				87CF898425AA2A0C00735A0D /* LocationFetcher.swift in Sources */,
 				87B8BF6225A6440A00D938EB /* NewFriendSaver.swift in Sources */,
 				879FA2DE25A5545E00C3FCE1 /* photoDetailView.swift in Sources */,
 				879FA2D425A552CE00C3FCE1 /* ImagePicker.swift in Sources */,

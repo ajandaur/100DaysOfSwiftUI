@@ -11,20 +11,10 @@
 import UIKit
 
 class NewFriendSaver: NSObject {
+
     
-    var successHandler: (() -> Void)?
-    var errorHandler: ((Error) -> Void)?
-    
-    @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            errorHandler?(error)
-        } else {
-            successHandler?()
-        }
-    }
-    
-    func saveData(image: UIImage, firstName: String, lastName: String) {
-        let friend = NewFriend(firstName: firstName, lastName: lastName, id: UUID())
+    func saveData(image: UIImage, firstName: String, lastName: String, latitude: Double, longitude: Double) {
+        let friend = NewFriend(firstName: firstName, lastName: lastName, id: UUID(), latitude: latitude, longitude: longitude)
         writeToJSON(friend)
         saveImage(image: image, id: friend.id)
     }
@@ -97,6 +87,27 @@ class NewFriendSaver: NSObject {
         // just send back the first one, which ought to be the only one
         return paths[0]
     }
+    
+    func clearAllFile() {
+            let fileManager = FileManager.default
+
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+
+            print("Directory: \(paths)")
+
+            do
+            {
+                let fileName = try fileManager.contentsOfDirectory(atPath: paths)
+
+                for file in fileName {
+                    // For each file in the directory, create full path and delete the file
+                    let filePath = URL(fileURLWithPath: paths).appendingPathComponent(file).absoluteURL
+                    try fileManager.removeItem(at: filePath)
+                }
+            }catch let error {
+                print(error.localizedDescription)
+            }
+        }
     
     
    

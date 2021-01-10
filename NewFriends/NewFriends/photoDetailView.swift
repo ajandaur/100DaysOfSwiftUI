@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct photoDetailView: View {
     
-    var friend: NewFriend
-    var imageUrl: URL
+    @State var friend: NewFriend
+    @State var imageUrl: URL
 
-    
-    
-    
-    
     var body: some View {
         VStack {
             Image(uiImage: friend.getImage()!)
@@ -23,8 +20,9 @@ struct photoDetailView: View {
                 .scaledToFit()
             
             Text("\(friend.firstName) \(friend.lastName)")
-            // TODO: Add the MapView here
-            
+            if friend.latitude != nil {
+                MapView(centerCoordinate: CLLocationCoordinate2D(latitude: friend.latitude!, longitude: friend.longitude!))
+            }
         }
         
     }

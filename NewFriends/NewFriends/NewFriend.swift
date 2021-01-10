@@ -13,6 +13,10 @@ struct NewFriend: Identifiable, Comparable, Codable, Hashable {
     var lastName = ""
     var id = UUID()
     
+    // lat and long for mapView
+    var latitude: Double?
+    var longitude: Double?
+    
     static func <(lhs: NewFriend, rhs: NewFriend) -> Bool {
         lhs.lastName < rhs.lastName
     }
