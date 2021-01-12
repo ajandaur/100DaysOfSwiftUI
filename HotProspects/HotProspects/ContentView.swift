@@ -11,7 +11,9 @@ import SwiftUI
 
 struct ContentView: View {
  
-
+    // store single instance of Prospects class
+    var prospects = Prospects()
+    
     var body: some View
     {
         TabView {
@@ -37,6 +39,8 @@ struct ContentView: View {
                     Text("Me")
                 }
         }
+        // allow all the child views to access prospects var
+        .environmentObject(prospects)
     }
 }
 
