@@ -24,6 +24,27 @@ struct ProspectsView: View {
     // property to show QRScanner
     @State private var isShowingScanner = false
     
+    // MARK: Challenge 1 - Add an icon to the “Everyone” screen showing whether a prospect was contacted or not.
+    
+    let contactedIcon = "person.crop.circle.fill.badge.checkmark"
+    let unContactedIcon = "person.crop.circle.badge.xmark"
+    
+    // MARK: Challenge 3 - action sheet properties and testData
+    var testData: String {
+        let sampleData = [
+            "Paul Hudson\npaul@hackingwithswift.com",
+            "Thomas Daly\ndaly@hackingwithswift.com",
+            "Alex Anderson\nanderson@hackingwithswift.com",
+            "Larry Sanchez\nsanchez@hackingwithswift.com"
+        ]
+        let randomIndex = Int.random(in: 0...3)
+        return sampleData[randomIndex]
+    }
+    
+    // property to show filters
+    @State private var showingFilters = false
+    
+    
     var title: String {
         switch filter {
         case .none:
@@ -47,6 +68,7 @@ struct ProspectsView: View {
         }
     }
     
+    // imported package for CodeScannerView
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
         self.isShowingScanner = false
        // the QR codes we’re generating are a name, then a line break, then an email address, so if our scanning result comes back successfully then we can pull apart the code string into those components and use them to create a new Prospect
@@ -77,9 +99,9 @@ struct ProspectsView: View {
             
             var dateComponents = DateComponents()
             dateComponents.hour = 9
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             // test code
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)
@@ -108,10 +130,16 @@ struct ProspectsView: View {
             List {
                 ForEach(filteredProspects) { prospect in
                     VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                        HStack {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                            
+                            Spacer()
+                            Image(systemName: prospect.isContacted ? self.contactedIcon : self.unContactedIcon)
+                        }
+                      
                     }
                     // add context menu using ternary operator when setting button's title
                     .contextMenu {
@@ -128,7 +156,13 @@ struct ProspectsView: View {
                 }
             }
                 .navigationBarTitle(title)
-                .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                self.showingFilters = true
+            }) {
+                Image(systemName: "arrow.up.arrow.down.circle.fill")
+                Text("Sort")
+            },
+                trailing: Button(action: {
                     self.isShowingScanner = true
                 }) {
                     Image(systemName: "qrcode.viewfinder")
@@ -136,8 +170,17 @@ struct ProspectsView: View {
                 })
             
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                CodeScannerView(codeTypes: [.qr], simulatedData: testData, completion: self.handleScan)
             }
+            
+            // MARK: Challenge 3 - Use an action sheet to customize the way users are sorted in each screen – by name or by most recent.
+            .actionSheet(isPresented: $showingFilters) {
+                ActionSheet(title: Text("Sort Contacts By"), buttons: [.default(Text("Name"), action: {
+                    self.prospects.sortUsername()
+                }),
+                .cancel()])
+            }
+            .animation(.easeOut)
         }
     }
 }

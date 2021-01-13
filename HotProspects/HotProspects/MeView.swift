@@ -36,7 +36,7 @@ struct MeView: View {
         NavigationView {
             VStack {
                 TextField("Name", text: $name)
-                    //  tells iOS what kind of information we’re asking the user for
+                    //  .textContentType tells iOS what kind of information we’re asking the user for
                     // allow iOS to provide autocomplete data on behalf of the user
                     .textContentType(.name)
                     .font(.title)
