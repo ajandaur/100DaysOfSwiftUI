@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct CardView: View {
-    var card: Card
+    
+    // the actual card
+    @State var card: Card
+    
+    // general property for accessibility
+    @Environment(\.accessibilityEnabled) var accessibilityEnabled
     
     // connected closure for contentView()
     var removal: (() -> Void)? = nil
+    
+    let retryCards: Bool
+
     
     // property for showing answer
     @State private var isShowingAnswer = false
@@ -19,9 +27,12 @@ struct CardView: View {
     //  environment property to track whether we should be using color for accessibility
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
-    
     // track how much the user dragged
     @State private var offset = CGSize.zero
+    
+    // property to create vibrations
+    @State private var feedback = UINotificationFeedbackGenerator()
+    
     
     var body: some View {
         
@@ -38,7 +49,10 @@ struct CardView: View {
                         : Color.white
                         .opacity(1 - Double(abs(offset.width / 50)))
                         )
-            
+                
+                // make it clear that our cards are tappable buttons
+                .accessibility(addTraits: .isButton)
+                
                 .background(
                     differentiateWithoutColor
                     ? nil
@@ -49,25 +63,31 @@ struct CardView: View {
                 .shadow(radius: 10)
             
             VStack {
-                Text(card.prompt)
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
-                
-                if isShowingAnswer {
-                    Text(card.answer)
-                        .font(.title)
-                        .foregroundColor(.gray)
+                //  detect whether the user has accessibility enabled on their device, and if so automatically toggle between showing the prompt and showing the answer
+                if accessibilityEnabled {
+                    Text(isShowingAnswer ? card.answer : card.prompt)
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                } else {
+                    Text(card.prompt)
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                    
+                    if isShowingAnswer {
+                        Text(card.answer)
+                            .font(.title)
+                            .foregroundColor(.gray)
+                    }
                 }
-                
-                
-                Text("Percentage Correct: \(card.percentageCorrect, specifier: "%.1f")")
-                    .font(.subheadline)
-                
-
+            
             }
             .padding(20)
             .multilineTextAlignment(.center)
         }
+        
+        // spring animation to our card, it will slide into the center, which I think is a much clearer indication to our user of what actually happened
+        .animation(.spring())
+        
         // A width of 450 is no accident: the smallest iPhones have a landscape width of 480 points, so this means our card will be fully visible on all devices.
         .frame(width: 450, height: 250)
         
@@ -88,17 +108,18 @@ struct CardView: View {
             DragGesture()
                 .onChanged { gesture in
                     self.offset = gesture.translation
+                    
+                    // should call prepare() as soon as you know the haptic might be needed, to warm it up
+                    self.feedback.prepare()
                 }
             
                 .onEnded { _ in
-                    if abs(self.offset.width) > 100 {
-                        // removal is only called when the closure has been set
-                        self.removal?()
-            
-                        
-                    } else {
-                        self.offset = .zero
+                    if self.offset.width < 0 {
+                        self.feedback.notificationOccurred(.error)
                     }
+                    
+                    
+                    self.removal?()
                 }
             )
         
@@ -111,6 +132,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card.example)
+        CardView(card: Card.example, retryCards: false)
     }
 }
