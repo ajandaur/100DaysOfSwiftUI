@@ -12,5 +12,5 @@ Challenge days     |  1 / 1  | 100%
 Final Exam         |  0 / 1  | 0%
 
 
-## Demos / Animations (COMING SOON)
+## Demos (COMING SOON)
 
