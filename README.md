@@ -6,7 +6,7 @@ This is my repo full of projects from the course, 100 Days Of SwiftUI Challenge 
 
 Type               | Number  | Completion
 :---               |  :---:  |   :---:
-Projects           |  16 / 19 | 84%
+Projects           |  17 / 19 | 89%
 Milestone Projects |  5 / 6  | 83%
 Challenge days     |  1 / 1  | 100%
 Final Exam         |  0 / 1  | 0%
