@@ -44,10 +44,10 @@ struct EditCard: View {
             }
             .navigationBarTitle("Edit Cards")
             .navigationBarItems(trailing: Button("Done", action: dismiss))
-            
             .listStyle(GroupedListStyle())
             .onAppear(perform: loadData)
         }
+        // in landscape mode there are 2 views in a navigation view: left and right
         .navigationViewStyle(StackNavigationViewStyle())
     
     }

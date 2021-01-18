@@ -8,7 +8,10 @@
 import SwiftUI
 
 // MARK: Challenge 2 - Add a settings screen that has a single option: when you get an answer one wrong that card goes back into the array so the user can try it again.
+
 struct SettingsView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
     
     @Binding var retryCards: Bool
     
@@ -22,10 +25,18 @@ struct SettingsView: View {
                 }
             }
             .navigationBarTitle("Settings")
+            .navigationBarItems(trailing: Button("Done", action: dismiss))
 
         }
+        // in landscape mode there are 2 views in a navigation view: left and right
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
+    
+    func dismiss() {
+        presentationMode.wrappedValue.dismiss()
+    }
+    
 }
     
     struct SettingsView_Previews: PreviewProvider {

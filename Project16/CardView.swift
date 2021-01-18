@@ -4,6 +4,7 @@
 //
 //  Created by Anmol  Jandaur on 1/13/21.
 //
+// Reference for Challenge 2 - https://github.com/no-more-coding/SwiftUI_Journey/blob/c5378d5073750d0d6f2ee80929b368c917d8e5bc/23_Project17_Flashzilla/23_Project17_Flashzilla/View/CardView.swift
 
 import SwiftUI
 
@@ -15,10 +16,16 @@ struct CardView: View {
     // general property for accessibility
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     
-    // connected closure for contentView()
-    var removal: (() -> Void)? = nil
-    
+    // let contentView know whether the setting is turned on
     let retryCards: Bool
+    
+    // when its an incorrect answer and settings option is ON
+    private var resetPosition: Bool {
+        offset.width < 0 && retryCards
+    }
+    
+    // connected closure for contentView()
+    var removal: ((_ isCorrect: Bool) -> Void)?
 
     
     // property for showing answer
@@ -33,6 +40,18 @@ struct CardView: View {
     // property to create vibrations
     @State private var feedback = UINotificationFeedbackGenerator()
     
+    // MARK: Challenge 3 - If you drag a card to the right but not far enough to remove it, then release, you see it turn red as it slides back to the center. Why does this happen and how can you fix it? (Tip: use a custom modifier for this to avoid cluttering your body property.)
+    func backgroundColor(offset: CGSize) -> Color {
+        if offset.width > 0 {
+            return .green
+        }
+        
+        if offset.width < 0 {
+            return .red
+        }
+        
+        return .white
+    }
     
     var body: some View {
         
@@ -57,7 +76,9 @@ struct CardView: View {
                     differentiateWithoutColor
                     ? nil
                         : RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(offset.width > 0 ? Color.green : Color.red)
+                        
+                        // challenge 3 - fill the background appropriately depending on gesture direction
+                        .fill(backgroundColor(offset: offset))
                 )
                 // add shadow to add a depth effect
                 .shadow(radius: 10)
@@ -85,9 +106,6 @@ struct CardView: View {
             .multilineTextAlignment(.center)
         }
         
-        // spring animation to our card, it will slide into the center, which I think is a much clearer indication to our user of what actually happened
-        .animation(.spring())
-        
         // A width of 450 is no accident: the smallest iPhones have a landscape width of 480 points, so this means our card will be fully visible on all devices.
         .frame(width: 450, height: 250)
         
@@ -104,29 +122,47 @@ struct CardView: View {
         
         // attach a DragGesture to our card so that it updates offset as the user drags the card around.
         //  We are reading the translation property to see where the user has dragged to, and we’ll be using that to set our offset property
-        .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    self.offset = gesture.translation
-                    
-                    // should call prepare() as soon as you know the haptic might be needed, to warm it up
-                    self.feedback.prepare()
-                }
-            
-                .onEnded { _ in
-                    if self.offset.width < 0 {
-                        self.feedback.notificationOccurred(.error)
-                    }
-                    
-                    
-                    self.removal?()
-                }
-            )
+        .gesture(dragGesture())
         
         // add onTapGesture()
         .onTapGesture {
             isShowingAnswer.toggle()
         }
+        
+        // spring animation to our card, it will slide into the center, which is a much clearer indication to our user of what actually happened
+        .animation(.spring())
+        
+    } // body
+    
+    func dragGesture() -> some Gesture {
+        DragGesture()
+            .onChanged { gesture in
+                self.offset = gesture.translation
+                
+                // should call prepare() as soon as you know the haptic might be needed, to warm it up
+                self.feedback.prepare()
+            }
+        
+            .onEnded { _ in
+                if abs(self.offset.width) > 100 {
+                    // remove card
+                    if self.offset.width > 0 {
+                        self.feedback.notificationOccurred(.success)
+                    } else {
+                        self.feedback.notificationOccurred(.error)
+                    }
+                    
+                    self.removal?(self.offset.width > 0)
+                    
+                    if self.resetPosition {
+                        self.isShowingAnswer = false
+                        self.offset = .zero
+                    }
+                } else {
+                    // restore card
+                    self.offset = .zero
+                }
+            }
     }
 }
 

@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Card: Codable {
+struct Card: Codable, Identifiable {
+    let id = UUID()
     let prompt: String
     let answer: String
-    
 
     
     static var example: Card {
