@@ -158,6 +158,39 @@ struct ContentView: View {
         fatalError("Cound not load start.txt")
     }
     
+    // Project 18 - Challenge 2
+    func getOffset(listProxy: GeometryProxy, itemProxy: GeometryProxy) -> CGFloat {
+          let listHeight = listProxy.size.height
+          let listStart = listProxy.frame(in: .global).minY
+          let itemStart = itemProxy.frame(in: .global).minY
+
+          let itemPercent =  (itemStart - listStart) / listHeight * 100
+
+          let thresholdPercent: CGFloat = 60
+          let indent: CGFloat = 5
+
+          if itemPercent > thresholdPercent {
+              return (itemPercent - (thresholdPercent - 1)) * indent
+          }
+
+          return 0
+      }
+    
+    //Project 18 - Challenge 3
+    func getColor(listProxy: GeometryProxy, itemProxy: GeometryProxy) -> Color {
+        let listHeight = listProxy.size.height
+        let listStart = listProxy.frame(in: .global).minY
+        let itemStart = itemProxy.frame(in: .global).minY
+
+        
+        //The values to input can be figured out using the row’s current position divided by maximum position, which should give you values in the range 0 to 1.
+        let colorValue =  (itemStart - listStart) / listHeight * 100
+        
+        return Color(hue: Double(colorValue), saturation: 0.9, brightness: 0.9)
+    }
+   
+    
+    
     var body: some View {
         // NavigationView showing words they aer spelling from
         NavigationView {
@@ -168,15 +201,30 @@ struct ContentView: View {
                     .padding()
                     .autocapitalization(.none)
                 
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
+                // MARK: Project 18, Challenge 2 - words towards the bottom of the list slide in from the right as you scroll. Ideally at least the top 8-10 words should all be positioned normally, but after that they should be offset increasingly to the right.
+                // Help from https://github.com/clarknt/100-days-of-swiftui/blob/master/24-Project18/Challenge2/Project18-Challenge2/ContentView.swift
+                GeometryReader { listProxy in
+                               List(self.usedWords, id: \.self) { word in
+                                   GeometryReader { itemProxy in
+                                       HStack {
+                                           Image(systemName: "\(word.count).circle")
+                                        
+                                        // MARK: Project 18 Challenge 3 - make the letter count images in project 5 change color as you scroll.
+                                            .foregroundColor(self.getColor(listProxy: listProxy, itemProxy: itemProxy))
+                                        
+                                           Text(word)
+                                       }
+                                       .frame(width: itemProxy.size.width, alignment: .leading)
+                                       .offset(x: self.getOffset(listProxy: listProxy, itemProxy: itemProxy), y: 0)
+                                   }
+                        
+                        // MARK: Accessibilty modification to group items into a single group where children are ignored by VoiceOver and label is added
+                        .accessibilityElement(children: .ignore)
+                        .accessibility(label: Text("\(word), \(word.count) letters"))
                     }
-                    // MARK: Accessibilty modification to group items into a single group where children are ignored by VoiceOver and label is added
-                    .accessibilityElement(children: .ignore)
-                    .accessibility(label: Text("\(word), \(word.count) letters"))
+                    
                 }
+               
                 
                 // Challenge 3: put a text view below the List so you can track and show player's score for given root word
                 Text("Score \(score)")

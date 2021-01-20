@@ -22,14 +22,14 @@ struct MissionView: View {
         let astronaut: Astronaut
     }
     
-// we can loop over the mission crew, then for each crew member loop over all our astronauts to find the one that has a matching ID. When we find one we can convert that and their role into a CrewMember object, but if we don’t it means somehow we have a crew role with an invalid or unknown name.
+    // we can loop over the mission crew, then for each crew member loop over all our astronauts to find the one that has a matching ID. When we find one we can convert that and their role into a CrewMember object, but if we don’t it means somehow we have a crew role with an invalid or unknown name.
     init(mission: Mission, astronauts: [Astronaut]) {
         self.mission = mission
         
         var matches = [CrewMember]()
         
         for member in mission.crew {
-    
+            
             // first(where:) can be given a predicate (a fancy word for a condition), and it will send back the first array element that matches the predicate, or nil if none do. In our case we can use that to say “give me the first astronaut with the ID of armstrong.”
             
             if let match = astronauts.first(where: { $0.id == member.name }) {
@@ -41,22 +41,33 @@ struct MissionView: View {
         
         self.astronauts = matches
     }
-
+    
     
     // show information about the mission: its image, its mission badge, and all the astronauts that were on the crew along with their roles
-   
+    
     var body: some View {
         // use GeometryReader to set the maximum width of the mission image
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
-                        .padding(.top)
+                    // MARK: Project 18 - Challenge 1: when you scroll down in MissionView the mission badge image gets smaller. It doesn’t need to shrink away to nothing – going down to maybe 80% is fine.
                     
-                        .accessibility(hidden: true)
+                    // decided to make it a stretchy header with the help of https://blckbirds.com/post/stretchy-header-and-parallax-scrolling-in-swiftui/
+                    
+                    GeometryReader { geo in
+                        Image(self.mission.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geo.size.width, height: geo.size.height * 0.9 + geo.frame(in: .global).minY)
+                            .clipped()
+                            .offset(y: -geo.frame(in: .global).minY)
+                            .padding(.top)
+                            
+                            .accessibility(hidden: true)
+                    }
+                    .frame(height: geometry.size.width * 0.75)
+                    
+                    
                     
                     // Challenge 1: add launch date below mission badge image.
                     VStack {
@@ -66,8 +77,8 @@ struct MissionView: View {
                     .font(.caption)
                     .accessibilityElement(children: .ignore)
                     .accessibility(label: Text("Mission Launch Date: mission.formattedLaunchDate"))
-
-                
+                    
+                    
                     
                     Text(self.mission.description)
                         .padding()
@@ -81,7 +92,7 @@ struct MissionView: View {
                                     .frame(width: 83, height: 60)
                                     .clipShape(Capsule())
                                     .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
-                                
+                                    
                                     .accessibility(hidden: true)
                                 
                                 VStack(alignment: .leading) {
