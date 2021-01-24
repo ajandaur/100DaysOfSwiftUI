@@ -20,7 +20,8 @@ struct MeView: View {
     
     func generateQRCode(from string: String) -> UIImage {
         // input is a string, convert it to Data
-       
+        let data = Data(string.utf8)
+        filter.setValue(data, forKey: "inputMessage")
         
         // if conversion fails, send back SF symbol X mark
         if let outputImage = filter.outputImage {
@@ -47,8 +48,6 @@ struct MeView: View {
                     .font(.title)
                     .padding([.horizontal, .bottom])
                 
-                Spacer()
-                
                 // using the name and email address entered by the user, separated by a line break
                 Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
                     // To remove the fuzzy look that isc aused by SwiftUI trying to smooth out the pixels as we scale it up
@@ -57,6 +56,7 @@ struct MeView: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                 
+                Spacer()
                 
             }
             .navigationBarTitle("Your code")
