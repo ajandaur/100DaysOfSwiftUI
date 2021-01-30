@@ -20,6 +20,10 @@
 		8786032125B8E38A00F6F725 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786032025B8E38A00F6F725 /* HistoryView.swift */; };
 		8786032725B8E65F00F6F725 /* CoreDataRoll+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786032525B8E65F00F6F725 /* CoreDataRoll+CoreDataClass.swift */; };
 		8786032825B8E65F00F6F725 /* CoreDataRoll+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786032625B8E65F00F6F725 /* CoreDataRoll+CoreDataProperties.swift */; };
+		878603BC25BE52FE00F6F725 /* Result+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878603BA25BE52FE00F6F725 /* Result+CoreDataClass.swift */; };
+		878603BD25BE52FE00F6F725 /* Result+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878603BB25BE52FE00F6F725 /* Result+CoreDataProperties.swift */; };
+		878603CA25BE68F200F6F725 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878603C925BE68F200F6F725 /* Haptics.swift */; };
+		8793309F25C52FF800E74AF9 /* DieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8793309E25C52FF800E74AF9 /* DieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		8786032025B8E38A00F6F725 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8786032525B8E65F00F6F725 /* CoreDataRoll+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreDataRoll+CoreDataClass.swift"; path = "DiceRoll/CoreData/CoreDataRoll+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		8786032625B8E65F00F6F725 /* CoreDataRoll+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CoreDataRoll+CoreDataProperties.swift"; path = "DiceRoll/CoreData/CoreDataRoll+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		878603BA25BE52FE00F6F725 /* Result+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		878603BB25BE52FE00F6F725 /* Result+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		878603C925BE68F200F6F725 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		8793309E25C52FF800E74AF9 /* DieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +119,9 @@
 			children = (
 				878602CD25B8DB8B00F6F725 /* AppDelegate.swift */,
 				878602CF25B8DB8B00F6F725 /* SceneDelegate.swift */,
+				878603F725BEA16B00F6F725 /* Views */,
+				878603F625BEA16300F6F725 /* Model */,
 				8786032C25B8E66500F6F725 /* CoreData */,
-				878602D125B8DB8B00F6F725 /* ContentView.swift */,
-				8786031B25B8E38000F6F725 /* PlayView.swift */,
-				8786032025B8E38A00F6F725 /* HistoryView.swift */,
 				878602D625B8DB9100F6F725 /* Assets.xcassets */,
 				878602DB25B8DB9100F6F725 /* LaunchScreen.storyboard */,
 				878602DE25B8DB9100F6F725 /* Info.plist */,
@@ -152,11 +159,32 @@
 		8786032C25B8E66500F6F725 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				878603BA25BE52FE00F6F725 /* Result+CoreDataClass.swift */,
+				878603BB25BE52FE00F6F725 /* Result+CoreDataProperties.swift */,
 				878602D325B8DB8B00F6F725 /* DiceRoll.xcdatamodeld */,
 				8786032525B8E65F00F6F725 /* CoreDataRoll+CoreDataClass.swift */,
 				8786032625B8E65F00F6F725 /* CoreDataRoll+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		878603F625BEA16300F6F725 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				878603C925BE68F200F6F725 /* Haptics.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		878603F725BEA16B00F6F725 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				878602D125B8DB8B00F6F725 /* ContentView.swift */,
+				8786031B25B8E38000F6F725 /* PlayView.swift */,
+				8786032025B8E38A00F6F725 /* HistoryView.swift */,
+				8793309E25C52FF800E74AF9 /* DieView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,12 +319,16 @@
 			files = (
 				878602CE25B8DB8B00F6F725 /* AppDelegate.swift in Sources */,
 				8786032725B8E65F00F6F725 /* CoreDataRoll+CoreDataClass.swift in Sources */,
+				878603CA25BE68F200F6F725 /* Haptics.swift in Sources */,
 				8786032125B8E38A00F6F725 /* HistoryView.swift in Sources */,
 				878602D025B8DB8B00F6F725 /* SceneDelegate.swift in Sources */,
+				8793309F25C52FF800E74AF9 /* DieView.swift in Sources */,
 				878602D225B8DB8B00F6F725 /* ContentView.swift in Sources */,
 				8786031C25B8E38000F6F725 /* PlayView.swift in Sources */,
 				878602D525B8DB8B00F6F725 /* DiceRoll.xcdatamodeld in Sources */,
 				8786032825B8E65F00F6F725 /* CoreDataRoll+CoreDataProperties.swift in Sources */,
+				878603BD25BE52FE00F6F725 /* Result+CoreDataProperties.swift in Sources */,
+				878603BC25BE52FE00F6F725 /* Result+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

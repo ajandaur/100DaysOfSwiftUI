@@ -17,13 +17,26 @@ extension CoreDataRoll {
     }
 
     @NSManaged public var totalSum: Int16
-    @NSManaged public var result: [Int16]?
     @NSManaged public var id: UUID?
     @NSManaged public var numberOfSides: Int16
     @NSManaged public var date: Date?
+    @NSManaged public var mainResult: Result?
 
+    var wrappedNumberOfSides: Int {
+        Int(numberOfSides)
+    }
+    
+    var wrappedTotalSum: Int {
+        Int(totalSum)
+    }
+    
+    var wrappedId: UUID {
+        id ?? UUID()
+    }
+    
+    var wrappedDate: Date {
+        date ?? Date()
+    }
+    
 }
 
-extension CoreDataRoll : Identifiable {
-
-}
