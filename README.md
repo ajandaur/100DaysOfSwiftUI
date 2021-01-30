@@ -6,10 +6,10 @@ This is my repo full of projects and challenges from the course, 100 Days Of Swi
 
 Type               | Number  | Completion
 :---               |  :---:  |   :---:
-Projects + Challenges           |  17 / 19 | 89%
-Milestone Projects |  5 / 6  | 83%
+Projects + Challenges           |  19 / 19 | 100%
+Milestone Projects |  6 / 6  | 100%
 Challenge days     |  1 / 1  | 100%
-Final Exam         |  0 / 1  | 0%
+Final Exam         |  1 / 1  | 100%
 
 
 ## Demos (COMING SOON)
