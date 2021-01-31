@@ -13,7 +13,7 @@ import SwiftUI
 struct ContentView: View {
     // SwiftUI must use strings to store text field values
     
-    // Sychronizatio happens because
+    // Sychronization happens because
     // 1. Text field has two-way binding to the checkAmount
     // 2. checkAmount property is marked with @State which automatically watches for changes in the value --> re-invoke the body property
     @State private var checkAmount = ""
