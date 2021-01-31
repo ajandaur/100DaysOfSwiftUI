@@ -12,10 +12,10 @@ Challenge days     |  1 / 1  | 100%
 Final Exam         |  1 / 1  | 100%
 
 
-## Demos (COMING SOON)
+## Open project to see detailed screenshots!
 
-Projects / Topics                                                                                                                                                            | Screenshots
----                                                                                                                                                                          |---
+Projects / Topics                                                                                                                                                            |
+| --- | 
 [Project 1](Project1) - *WeSplit* <br/>(with challenges)                                         <br/><sub> Form, Section, NavigationView, @State property wrapper, TextField, Picker, ForEach </sub> | |
 [Challenge Day 1](ChallengeDay) - *Converter*  |  |
 [Project 2](Project2) - *Guess the Flag* <br/>(with challenges)                                         <br/><sub> VStack, Image, Alert </sub> |  |
