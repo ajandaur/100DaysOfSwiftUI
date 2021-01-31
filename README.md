@@ -16,8 +16,7 @@ Final Exam         |  1 / 1  | 100%
 
 Projects / Topics                                                                                                                                                            | Screenshots
 ---                                                                                                                                                                          |---
-[Project 1](Project1) - *WeSplit* <br/>(with challenges)                                         <br/><sub> Form, Section, NavigationView, @State property wrapper, TextField, Picker, ForEach </sub> | 
-|
+[Project 1](Project1) - *WeSplit* <br/>(with challenges)                                         <br/><sub> Form, Section, NavigationView, @State property wrapper, TextField, Picker, ForEach </sub> | |
 [Challenge Day 1](ChallengeDay) - *Converter*  |  |
 [Project 2](Project2) - *Guess the Flag* <br/>(with challenges)                                         <br/><sub> VStack, Image, Alert </sub> |  |
 [Project 3](Project3) - *View and Modifiers* <br/>(with challenges)                                         <br/><sub> Views, modifiers, composition, containers </sub> |  |
