@@ -34,7 +34,7 @@ struct ContentView: View {
                         // show expense amount on the right with a Spacer()
                         Spacer()
                         Text("$\(item.amount)")
-                        // Challenge 2: Modify the expense amounts in ContentView to contain some styling depending on their value
+                        // MARK: Challenge 2 - Modify the expense amounts in ContentView to contain some styling depending on their value
                             .fontWeight(self.fontStyles[item.costStyleIndex])
                             .foregroundColor(self.colorStyles[item.costStyleIndex])
                             

@@ -130,12 +130,16 @@ struct ContentView: View {
                             )
                     }
                     Spacer()
+                    
                     Text("Score: \(score)")
                         .font(.custom("Marker Felt", size: 30, relativeTo: .headline))
-                        .padding()
+                      
                     Text("Questions remaining: \(numberOfQuestions - questionCounter)")
                         .font(.custom("Marker Felt", size: 20, relativeTo: .headline))
+                        .padding()
+                    
                     Spacer()
+                        
                     
                     AnimalImage()
                         .offset(dragAmount)

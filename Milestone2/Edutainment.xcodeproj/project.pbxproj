@@ -14,7 +14,6 @@
 		8767F9182565C29B0043FE16 /* EdutainmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9172565C29B0043FE16 /* EdutainmentTests.swift */; };
 		8767F9232565C29B0043FE16 /* EdutainmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9222565C29B0043FE16 /* EdutainmentUITests.swift */; };
 		8767F9342565C2EE0043FE16 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8767F9332565C2EE0043FE16 /* Question.swift */; };
-		87C036AB256B380C00402002 /* AnimalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C036AA256B380B00402002 /* AnimalImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		8767F9222565C29B0043FE16 /* EdutainmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdutainmentUITests.swift; sourceTree = "<group>"; };
 		8767F9242565C29B0043FE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8767F9332565C2EE0043FE16 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		87C036AA256B380B00402002 /* AnimalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				8767F9052565C2970043FE16 /* EdutainmentApp.swift */,
 				8767F9072565C2970043FE16 /* ContentView.swift */,
-				87C036AA256B380B00402002 /* AnimalImage.swift */,
 				8767F9092565C29B0043FE16 /* Assets.xcassets */,
 				8767F9332565C2EE0043FE16 /* Question.swift */,
 				8767F90E2565C29B0043FE16 /* Info.plist */,
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8767F9082565C2970043FE16 /* ContentView.swift in Sources */,
-				87C036AB256B380C00402002 /* AnimalImage.swift in Sources */,
 				8767F9342565C2EE0043FE16 /* Question.swift in Sources */,
 				8767F9062565C2970043FE16 /* EdutainmentApp.swift in Sources */,
 			);

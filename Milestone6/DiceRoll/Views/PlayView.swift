@@ -158,9 +158,8 @@ struct PlayView: View {
                         }
                         // animation
                         .animation(.easeInOut)
-    
                     }
-                    .padding()
+               
                     
                     Text("You rolled a \(self.countTotal(at: self.diceMaxValue[diceSelection]))")
                         .font(Font.system(size: CGFloat(fontResultSize), weight: .heavy, design: .default))
@@ -199,7 +198,7 @@ struct PlayView: View {
                     .background(Color.blue.opacity(opacityValue))
                     .cornerRadius(cornerRadiusValue)
                     .padding()
-                    .font(.largeTitle)
+                    .font(.headline)
                     
                 } // VStack
             } // GeometryReader
