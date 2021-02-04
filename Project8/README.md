@@ -1,4 +1,4 @@
-# Project 7: Moonshot
+# Project 8: Moonshot
 
 <img src="https://user-images.githubusercontent.com/35319467/106857787-7d0ad200-6675-11eb-9f15-e4843ef1ecfe.png" width="500">
 
