@@ -97,6 +97,7 @@
 		871434582595190B00CF2054 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				8781EE0E2592BDFF0094D319 /* loadData.swift */,
 				8781EE23259300E30094D319 /* Friend+CoreDataProperties.swift */,
 				8781EE22259300E30094D319 /* Friend+CoreDataClass.swift */,
 				8781EE24259300E30094D319 /* User+CoreDataClass.swift */,
@@ -150,7 +151,6 @@
 				871434592595192000CF2054 /* Models */,
 				8714345A2595192E00CF2054 /* Views */,
 				8781EDD52592BCA40094D319 /* SceneDelegate.swift */,
-				8781EE0E2592BDFF0094D319 /* loadData.swift */,
 				8781EDD32592BCA40094D319 /* AppDelegate.swift */,
 				8781EDDC2592BCA80094D319 /* Assets.xcassets */,
 				8781EDE12592BCA80094D319 /* LaunchScreen.storyboard */,

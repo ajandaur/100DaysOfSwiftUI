@@ -58,7 +58,7 @@ struct MissionView: View {
                         Image(self.mission.image)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: geo.size.width, height: geo.size.height * 0.9 + geo.frame(in: .global).minY)
+                            .frame(width: geo.size.width, height: geo.size.height * 0.8 + geo.frame(in: .global).minY)
                             .clipped()
                             .offset(y: -geo.frame(in: .global).minY)
                             .padding(.top)
@@ -70,6 +70,7 @@ struct MissionView: View {
                     
                     
                     // Challenge 1: add launch date below mission badge image.
+                    
                     VStack {
                         Text("Mission Launch Date:")
                         Text(mission.formattedLaunchDate)

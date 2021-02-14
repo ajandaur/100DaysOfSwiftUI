@@ -17,7 +17,7 @@ struct MapCircleButtonView: View {
     
     @State private var locations = [CodableMKPointAnnotation]()
     
-    // when the user adds a palce we want to edit immediately
+    // when the user adds a place we want to edit immediately
     @State private var showingEditScreen = false
     
     // state properties to connect bindings from MapView

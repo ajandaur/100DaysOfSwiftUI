@@ -59,7 +59,7 @@ struct EditView: View {
                     TextField("Description", text: $placemark.wrappedSubtitle)
                 }
                 
-                // show pages if they have loaded or st atus text view otherwise
+                // show pages if they have loaded or status text view otherwise
                 Section(header: Text("Nearby…")) {
                     if loadingState == .loaded {
                         List(pages, id: \.pageid) { page in

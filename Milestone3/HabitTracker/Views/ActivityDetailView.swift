@@ -28,7 +28,7 @@ struct ActivityDetailView: View {
                     .font(.headline)
                     .padding()
                 Button(action: incrementCounter) {
-                    Image(systemName: "\(activities.activities[index].count).circle.fill")
+                    Image(systemName: "\(activities.activities[index].count).circleViews.fill")
                         .resizable()
                         .scaledToFit()
                         .overlay(

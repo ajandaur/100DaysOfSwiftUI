@@ -30,7 +30,7 @@ extension FileManager {
 extension Bundle {
     
     // Be very careful: There is a big difference between T and [T]
-    // Use constraints and gains here (CS193p babyyy!) -> we can tell Swift that T can be whatever we want, as long as that thing conforms to Codable. That way Swift knows it’s safe to use, and will make sure we don’t try to use the method with a type that doesn’t conform to Codable
+    // Use constrains and gains here (CS193p babyyy!) -> we can tell Swift that T can be whatever we want, as long as that thing conforms to Codable. That way Swift knows it’s safe to use, and will make sure we don’t try to use the method with a type that doesn’t conform to Codable
     
     func decode<T: Codable>(_ file: String) -> T {
         // use Bundle to find the path to the file

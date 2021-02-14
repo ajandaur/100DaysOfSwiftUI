@@ -17,7 +17,7 @@ struct AstronautView: View {
     
     var ListOfMissions: [Mission] = Bundle.main.decode("missions.json")
     
-    // Challenge 2: Use a custom init to loops over all the missions and figuring out whether to astronuat was a part of that mission.
+    // Challenge 2: Use a custom init to loops over all the missions and figuring out whether the astronuat was a part of that mission.
     init(astronaut: Astronaut, missionsCompleted: [Mission]) {
         self.astronaut = astronaut
             

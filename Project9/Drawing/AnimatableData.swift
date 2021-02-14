@@ -11,6 +11,8 @@ import SwiftUI
 
 struct AnimatableData: View {
     @State private var insetAmount: CGFloat = 50
+    
+    
     var body: some View {
         Trapezoid(insectAmount: insetAmount)
             .frame(width: 200, height: 100)

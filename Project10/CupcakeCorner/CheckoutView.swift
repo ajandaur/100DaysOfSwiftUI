@@ -22,24 +22,24 @@ struct CheckoutView: View {
     var body: some View {
         // we’ll use a GeometryReader to make sure our cupcake image is sized correctly, a VStack inside a vertical ScrollView, then our image, the cost text, and button to place the order.
         GeometryReader { geo in
-            ScrollView {
-                VStack {
-                    Image("cupcakes")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: geo.size.width)
-                        
-                    // hide the image from VoiceOver
-                        .accessibility(hidden: true)
-                    
-                    Text("Your total is $\(self.orderWrapper.order.cost, specifier: "%.2f")")
-                        .font(.title)
-                    
-                    Button("Place Order") {
-                        self.placeOrder()
-                    }
-                    .padding()
-                }
+                ScrollView {
+                        VStack {
+                            Image("cupcakes")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: geo.size.width)
+                                
+                                // hide the image from VoiceOver
+                                .accessibility(hidden: true)
+                            
+                            Text("Your total is $\(self.orderWrapper.order.cost, specifier: "%.2f")")
+                                .font(.title)
+                            
+                            Button("Place Order") {
+                                self.placeOrder()
+                            }
+                            .padding()
+                        }
             }
         }
         // alert() modifier to watch the Boolean and show an alert when its true
@@ -99,9 +99,9 @@ struct CheckoutView: View {
         
     }
 }
-    
-    struct CheckoutView_Previews: PreviewProvider {
-        static var previews: some View {
-            CheckoutView(orderWrapper: OrderWrapper())
-        }
+
+struct CheckoutView_Previews: PreviewProvider {
+    static var previews: some View {
+        CheckoutView(orderWrapper: OrderWrapper())
     }
+}

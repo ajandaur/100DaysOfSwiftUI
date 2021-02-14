@@ -14,7 +14,6 @@ struct AddActivityView: View {
     @Environment(\.presentationMode) var presentationMode
     
     // add property to store an Activities object
-    // We don’t want to create a second instance of the Expenses class so use a property wrapper
     @ObservedObject var activites: Activities
     
     // Check for invalid input of name and description

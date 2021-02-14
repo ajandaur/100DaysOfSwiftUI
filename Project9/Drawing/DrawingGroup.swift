@@ -44,7 +44,7 @@ struct ColorCyclingCircle: View {
             }
         }
         
-        // Fix this by applying drawingGroup() -> this tells SwiftUI to render the content of thev iew in an off-screen image before putting it back onto thescreen as a single rendered output -> makes it much faster and smoother
+        // Fix this by applying drawingGroup() -> this tells SwiftUI to render the content of the view in an off-screen image before putting it back onto the screen as a single rendered output -> makes it much faster and smoother
         
         .drawingGroup()
     }

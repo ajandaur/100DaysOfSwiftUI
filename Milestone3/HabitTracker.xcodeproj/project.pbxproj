@@ -104,11 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				874C6F2725875132001A5421 /* HabitTrackerApp.swift */,
-				874C6F2925875132001A5421 /* ContentView.swift */,
-				873BA62325881F3F00E6B2DD /* ActivityDetailView.swift */,
-				874C6F55258756AC001A5421 /* Activity.swift */,
-				873BA61E2588160C00E6B2DD /* AddActivityView.swift */,
-				874C6F5A2587576F001A5421 /* Activities.swift */,
+				87B20EF125CE0DB000C59F72 /* Views */,
+				87B20EF225CE0DBC00C59F72 /* Models */,
 				874C6F2B25875136001A5421 /* Assets.xcassets */,
 				874C6F3025875136001A5421 /* Info.plist */,
 				874C6F2D25875136001A5421 /* Preview Content */,
@@ -140,6 +137,25 @@
 				874C6F4625875136001A5421 /* Info.plist */,
 			);
 			path = HabitTrackerUITests;
+			sourceTree = "<group>";
+		};
+		87B20EF125CE0DB000C59F72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				874C6F2925875132001A5421 /* ContentView.swift */,
+				873BA62325881F3F00E6B2DD /* ActivityDetailView.swift */,
+				873BA61E2588160C00E6B2DD /* AddActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		87B20EF225CE0DBC00C59F72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				874C6F5A2587576F001A5421 /* Activities.swift */,
+				874C6F55258756AC001A5421 /* Activity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
