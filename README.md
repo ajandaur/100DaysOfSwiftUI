@@ -37,8 +37,8 @@ Projects / Topics                                                               
 [Project 14](Project14) - *Bucket List* <br/>(with challenges)                                         <br/><sub> MapKit, Biometric authentication, Secure data writing, Comparable custom types, Documents directory </sub> | |
 [Project 15](Project15) - *Accessibility* <br/>(with challenges)                                       <br/><sub> Accessibility </sub> |  |
 [Milestone Projects 13-15](Milestone5) - *NewFriends*  |  |
-[Project 16](Project16) - *Hot Prospects* <br/>(with challenges)                                       <br/><sub> Custom environment objects, Tab Views, Result, objectWillChange, Image interpolation, Context menus, Local notifications, Swift package dependencies, filter(), map() </sub> |  |
-[Project 17](Project17) - *Flashzilla* <br/>(with challenges)                                       <br/><sub> Gestures, haptics, Combine, timers, accessibility </sub> |  |
+[Project 16](Project16) - *Flashzilla* <br/>(with challenges)                                       <br/><sub> Gestures, haptics, Combine, timers, accessibility </sub> |  |
+[Project 17](Project17) - *Hot Prospects* <br/>(with challenges)                                       <br/><sub> Custom environment objects, Tab Views, Result, objectWillChange, Image interpolation, Context menus, Local notifications, Swift package dependencies, filter(), map() </sub> |  |
 [Project 18](Project18) - *Layout and Geometry* <br/>(with challenges)                                       <br/><sub> Layout, alignment, geometry, positioning </sub> |  |
 [Milestone Projects 16-18](Milestone6) - *Roll the Dice*  | |
 [Project 19](Project19) - *SnowSeeker* <br/>(with challenges)                                       <br/><sub> Split view layouts, optional alerts, flexible layouts with Group, ListFormatter </sub> |  |
