@@ -151,9 +151,11 @@ struct ContentView: View {
                             }
                         }
                         .stacked(at: self.index(for: card), in: self.cards.count)
+                        
                         // drag only top card
                         .allowsHitTesting(self.index(for: card) == self.cards.count - 1)
-                        // oboice oer only reads top card
+                        
+                        // voice over only reads top card
                         .accessibility(hidden: self.index(for: card) < self.cards.count - 1)
                         
                        

@@ -31,7 +31,7 @@ struct CardView: View {
     // property for showing answer
     @State private var isShowingAnswer = false
 
-    //  environment property to track whether we should be using color for accessibility
+    // Environment property to track whether we should be using color for accessibility
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
     // track how much the user dragged

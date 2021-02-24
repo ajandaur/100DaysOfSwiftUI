@@ -6,7 +6,7 @@
 //
 // Credit to: https://github.com/plr-100daysOfSwiftUI/Whatsaname/tree/main/Whatsaname for help with this NSObject class
 // Something I learned from their code is that:
-// When you’re writing protocols and protocol extensions, there’s a difference between Self (capital S) and self (lowercase S). When used with a capital S, Self refers to the type that conform to the protocol, e.g. String or Int. When used with a lowercase S, self refers to the value inside that type, e.g. “hello” or 556.
+// When you’re writing protocols and protocol extensions, there’s a difference between Self (capital S) and self (lowercase s). When used with a S, Self refers to the type that conform to the protocol, e.g. String or Int. When used with a s, self refers to the value inside that type, e.g. “hello” or 556.
 
 import UIKit
 

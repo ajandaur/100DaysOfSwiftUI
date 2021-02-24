@@ -26,7 +26,7 @@ struct NewFriend: Identifiable, Comparable, Codable, Hashable {
     }
 }
 
-// 
+// extension to grab the image of the current NewFriend 
 extension NewFriend {
     func getImage() -> UIImage? {
         
