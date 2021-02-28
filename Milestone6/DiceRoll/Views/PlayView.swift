@@ -20,7 +20,7 @@ struct PlayView: View {
     private let colors = [Color.red, Color.blue, Color.green, Color.purple, Color.pink]
     
     
-    /// MARK: HAPTICS
+    // MARK: HAPTICS
     
     var haptics = Haptics()
     
@@ -87,12 +87,25 @@ struct PlayView: View {
         newResult.id = UUID()
         newResult.date = Date()
         newResult.totalResult = countTotal(at: self.diceMaxValue[diceSelection])
+        
+        // go through each of the die and save them to the newResult
         for i in 1...self.diceMaxValue[diceSelection] {
+            
+            // create new die
             let newDie = CoreDataRoll(context: self.moc)
+            
+            // date
             newDie.date = Date()
+            
+            // ID
             newDie.id = UUID()
+            
+            // number on die
             newDie.totalSum = Int16(selectDie(at: i))
+            
+            // number of sides
             newDie.numberOfSides = Int16(sidesMaxValue[sideSelection])
+            
             newResult.addToDice(newDie)
             
         }
@@ -160,9 +173,11 @@ struct PlayView: View {
                         .animation(.easeInOut)
                     }
                
+                    Spacer()
                     
                     Text("You rolled a \(self.countTotal(at: self.diceMaxValue[diceSelection]))")
                         .font(Font.system(size: CGFloat(fontResultSize), weight: .heavy, design: .default))
+                    
                         Spacer()
             
                     
@@ -170,8 +185,11 @@ struct PlayView: View {
                         
                         for i in 1...10 {
                             DispatchQueue.main.asyncAfter(deadline: .now()+(0.3 / Double(i))) {
+                                
                                 self.diceOne = Int.random(in: 1...self.sidesMaxValue[self.sideSelection])
+                                
                                 self.diceTwo = Int.random(in: 1...self.sidesMaxValue[self.sideSelection])
+                                
                                 self.diceThree = Int.random(in: 1...self.sidesMaxValue[self.sideSelection])
                                 
                                 print(self.diceOne, self.diceTwo, self.diceThree)

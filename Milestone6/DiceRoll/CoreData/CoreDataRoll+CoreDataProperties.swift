@@ -1,4 +1,4 @@
-//
+     //
 //  CoreDataRoll+CoreDataProperties.swift
 //  DiceRoll
 //

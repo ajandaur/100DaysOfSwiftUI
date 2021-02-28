@@ -116,6 +116,8 @@ struct ContentView: View {
                 } // NavLink
             }
             
+            // Code won't complie with .sheet unfortunately..
+            
 //            .sheet(isPresented: $showingFilter,content: {
 //                FilterSortView(filterCountry: self.$filterCountry, filterPrice: self.$filterSize, filterPrice: self.$filterPrice)
 //            })

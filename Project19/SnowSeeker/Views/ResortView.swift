@@ -86,6 +86,11 @@ struct ResortView: View {
         .navigationBarTitle(Text("\(resort.name), \(resort.country)"), displayMode: .inline)
         
         // alert modifier showing correct alert whenever selectedFacility has a value
+        
+        
+        //  We can’t just bind any @State property to the alert(item:) modifier – it needs to be something that conforms to the Identifiable protocol.
+        //  If we set selectedFacility to some string an alert should appear, but if we then change it to a different string SwiftUI needs to be able to see that the value changed.
+
         .alert(item: $selectedFacility) { facility in
             facility.alert
         }
@@ -116,10 +121,6 @@ struct ImageOverlay: View {
 
     }
 }
-
-//  We can’t just bind any @State property to the alert(item:) modifier – it needs to be something that conforms to the Identifiable protocol.
-//  If we set selectedFacility to some string an alert should appear, but if we then change it to a different string SwiftUI needs to be able to see that the value changed.
-
 
 struct ResortView_Previews: PreviewProvider {
     static var previews: some View {

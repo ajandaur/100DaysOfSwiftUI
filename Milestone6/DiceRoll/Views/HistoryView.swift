@@ -21,21 +21,17 @@ struct HistoryView: View {
         for offset in offsets {
             // find the roll in fetch request
             let result = results[offset]
-            
-            for die in result.diceArray {
+        
                 // delete it from the context
-              
-                moc.delete(die)
                 moc.delete(result)
                 
-                
-                
+                // save! 
                 do {
                     try moc.save()
                 } catch {
                     print("error with save after delete")
                 }
-            }
+   
             
         }
     }
