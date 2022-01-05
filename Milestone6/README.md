@@ -10,4 +10,4 @@ An app that helps users roll dice then store the results they had.
 - Haptics 
 - Core Animation
 ## Demo
-![Dice Roll Demo](100DaysOfSwiftUI/Milestone6/demo/demo.gif)
+![Dice Roll Demo](demo/demo.gif)
